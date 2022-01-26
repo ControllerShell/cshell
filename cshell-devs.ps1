@@ -1,6 +1,20 @@
 $v = 1.0
 cls
+echo "╔═══╗─────╔═══╦╗────╔╗╔╗"
 
+echo "║╔═╗║─────║╔═╗║║────║║║║"
+
+echo "║║─╚╬══╦═╗║╚══╣╚═╦══╣║║║"
+
+echo "║║─╔╣╔╗║╔╗╬══╗║╔╗║║═╣║║║"
+
+echo "║╚═╝║╚╝║║║║╚═╝║║║║║═╣╚╣╚╗"
+
+echo "╚═══╩══╩╝╚╩═══╩╝╚╩══╩═╩═╝"
+Start-Sleep -s 3
+cls
+
+Start-Sleep -ms 100
 echo "BSD 2-Clause License"
 echo ""
 echo "Copyright 2022 ControllerShell"
@@ -26,7 +40,8 @@ Get-ChildItem -Path "$games/cshell" -Filter *.ps1 -r | % { $_.Name.Replace( ".ps
 $name = Read-Host 'Enter the name of the game to create. You can edit it later in your local notepad.'
 Add-Item "$name.ps1"
 echo "# Welcome! ConShell is an open source game engine`n# for PowerShell.`n# Here is a simple game for you.`necho Hello World!`necho Use ConShell to develop`necho simple powershell games." >> "$name.ps1"
+
+echo "Game created. Launching editor."
+Start-Sleep -s 3
 notepad $name.ps1
-echo "Game Created. Exiting in 5 seconds."
-Start-Sleep -s 5
 exit
