@@ -55,15 +55,19 @@ if (-not Test-Path $games/games) {
   
 }
 cd games
+# Installs required dependencies, usally the editor.
 echo "Installing dependencies"
 Install-Module vim -Force
+# List all games in the workspace.
 echo "GAMES:"
 Get-ChildItem -Path "$games/games" -Filter *.ps1 -r | % { $_.Name.Replace( ".ps1","") }
+# Adds an input requesting a user to add a new game to the workspace.
 $name = Read-Host 'Enter the name of the game to create. You can edit it later in your local notepad.'
 Add-Item "$name.ps1"
+# Add a beginner game to the script.
 echo "# Welcome! ConShell is an open source game engine`n# for PowerShell.`n# Here is a simple game for you.`necho Hello World!`necho Use ConShell to develop`necho simple powershell games." >> "$name.ps1"
 
 echo "Game created. Launching editor."
 Start-Sleep -s 3
 vim $name.ps1
-e
+
