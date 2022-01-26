@@ -44,7 +44,8 @@ if (-not Test-Path $games/games) {
   }
   else
     {
-      echo "Welcome to CShell! The app çould not locate a workspace. Please create one in $games/games. 
+      echo "Welcome to CShell! The app çould not locate a workspace. Please create one in $games/games."
+      while (!(Test-Path "C:\flag.txt")) { Start-Sleep 1 }
     }
   
 }
