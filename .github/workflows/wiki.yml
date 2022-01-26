@@ -6,11 +6,8 @@ on:
 
             - main
 
-    pull_request:
-
-        branches:
-
-            - main
+    
+            
 
 name: Wiki Sync
 
@@ -30,14 +27,14 @@ jobs:
 
             with:
 
-                username: Consopedia
+                username: ${{github.events.actor}}
 
                 access_token: ${{ secrets.GITHUB_TOKEN }}
 
                 wiki_folder: wiki
 
-                commit_username: 'ConsoPedia'
+                commit_username: '${{ github.events.actor }} (via source code)'
 
-                commit_email: 'Tyler887@users.noreply.github.com'
+                commit_email: '${{ github.events.actor }}@users.noreply.github.com'
 
                 commit_message: 'Wiki sync'
