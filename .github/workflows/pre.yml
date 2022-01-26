@@ -25,8 +25,7 @@ jobs:
       - name: "Build & test"
  
         run: |
-          cd ./
-          pwsh PsBuilder.init.ps1
+          pwsh ./PsBuilder.init.ps1
           echo "done!"
 
       - uses: "marvinpinto/action-automatic-releases@latest"
