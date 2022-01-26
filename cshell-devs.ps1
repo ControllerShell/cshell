@@ -7,7 +7,7 @@ if (-not Test-Path $games/games) {
 }
 cd games
 echo "GAMES:"
-Get-ChildItem -Path "$games/cshell" -Filter *.psgame -r | % { $_.Name.Replace( ".ps1","") }
+Get-ChildItem -Path "$games/cshell" -Filter *.ps1 -r | % { $_.Name.Replace( ".ps1","") }
 $name = Read-Host 'Enter the name of the game to create. You can edit it later in your local notepad.'
 Add-Item "$name.ps1"
 echo "# Welcome! ConShell is an open source game engine`n# for PowerShell.`n# Here is a simple game for you.`necho Hello World!`necho Use ConShell to develop`necho simple powershell games." >> "$name.ps1"
