@@ -34,11 +34,11 @@ jobs:
 
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
 
-          automatic_release_tag: "$RANDOM$RANDOM$RANDOM$RANDOM$RANDOM"
+          automatic_release_tag: "dev"
 
           prerelease: true
 
-          title: "devbuild-$RANDOM$RANDOM$RANDOM$RANDOM$RANDOM"
+          title: "devbuild"
 
           files: |
 
