@@ -21,13 +21,7 @@ jobs:
     steps:
 
       # ...
-      - run: git clone https://github.com/psbuilder/psbuilder.git
-      - name: "Build & test"
- 
-        run: |
-          pwsh ./PsBuilder.init.ps1
-          echo "done!"
-
+      
       - uses: "marvinpinto/action-automatic-releases@latest"
 
         with:
