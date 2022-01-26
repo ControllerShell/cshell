@@ -1,0 +1,47 @@
+
+
+name: "pre-release"
+
+on:
+
+  push:
+
+    branches:
+
+      - "master"
+
+jobs:
+
+  pre-release:
+
+    name: "Pre Release"
+
+    runs-on: "ubuntu-latest"
+
+    steps:
+
+      # ...
+
+      - name: "Build & test"
+
+        run: |
+
+          echo "done!"
+
+      - uses: "marvinpinto/action-automatic-releases@latest"
+
+        with:
+
+          repo_token: "${{ secrets.GITHUB_TOKEN }}"
+
+          automatic_release_tag: "$RANDOM$RANDOM$RANDOM$RANDOM$RANDOM"
+
+          prerelease: true
+
+          title: "devbuild-$RANDOM$RANDOM$RANDOM$RANDOM$RANDOM"
+
+          files: |
+
+            LICENSE.txt
+
+            *.jar
