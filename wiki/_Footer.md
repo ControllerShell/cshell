@@ -1,1 +1,3 @@
-[Contribute](https://github.com/ControllerShell/cshell/tree/main/wiki) to the wiki.
+[Contribute](contributing) to the wiki.
+
+License: [GFDL](https://gnu.org/licenses/fdl-1.3.html).
