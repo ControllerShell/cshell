@@ -2,7 +2,8 @@
 
 ### Name
 
-ConShell - a broken productivity app
+ConShell - development as a service.
+<br /><sub>Japanese: ホラ貝 • サービスとしての開発。</sub>
 
 ### About
 
