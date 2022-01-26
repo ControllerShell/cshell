@@ -32,9 +32,20 @@ cls
 echo "ConShell $v"
 $games = cd
 if (-not Test-Path $games/games) {
-  Read-Host "Welcome to CShell! The app could not locate a CShell workspace. Press Enter to set up the workspace then your games can be stored in it."
-  
-  Add-Item "$games/games" -ItemType Directory
+  if (-not $IsLinux) {
+    $Setup = Show-MessageBox "Welcome to CShell! The app could not locate a CShell workspace. Set up the workspace?" "ConShell" -Buttons YesNo -Icon Question
+    if ($Setup -eq No) { 
+      echo "You decided not to setup the workspace. CShell requires a workspace. Exiting."
+
+      Wait-Sleep -s 5
+      exit
+    }
+    Add-Item $games/games --ItemType directory
+  }
+  else
+    {
+      echo "Welcome to CShell! The app çould not locate a workspace. Please create one in $games/games. 
+    }
   
 }
 cd games
