@@ -32,12 +32,14 @@ cls
 echo "ConShell $v"
 $games = cd
 if (-not Test-Path $games/games) {
-  echo "Welcome to CShell! Just setting up your space..."
+  Read-Host "Welcome to CShell! The app could not locate a CShell workspace. Press Enter to set up the workspace then your games can be stored in it."
+  
   Add-Item "$games/games" -ItemType Directory
+  
 }
 cd games
 echo "GAMES:"
-Get-ChildItem -Path "$games/cshell" -Filter *.ps1 -r | % { $_.Name.Replace( ".ps1","") }
+Get-ChildItem -Path "$games/games" -Filter *.ps1 -r | % { $_.Name.Replace( ".ps1","") }
 $name = Read-Host 'Enter the name of the game to create. You can edit it later in your local notepad.'
 Add-Item "$name.ps1"
 echo "# Welcome! ConShell is an open source game engine`n# for PowerShell.`n# Here is a simple game for you.`necho Hello World!`necho Use ConShell to develop`necho simple powershell games." >> "$name.ps1"
