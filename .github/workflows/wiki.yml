@@ -27,14 +27,14 @@ jobs:
 
             with:
 
-                username: ${{github.actor}}
+                username: ControllerShell
 
                 access_token: ${{ secrets.GITHUB_TOKEN }}
 
                 wiki_folder: wiki
 
-                commit_username: '${{ github.actor }} (via source code)'
+                commit_username: 'WikiSync'
 
-                commit_email: '${{ github.actor }}@users.noreply.github.com'
+                commit_email: 'ControllerShell@users.noreply.github.com'
 
                 commit_message: 'Wiki sync'
