@@ -35,6 +35,6 @@ jobs:
 
                 commit_username: 'WikiSync'
 
-                commit_email: 'ControllerShell@users.noreply.github.com'
+                commit_email: 'github-actions[bot]@users.noreply.github.com'
 
-                commit_message: 'Wiki sync'
+                commit_message: 'Automated wiki sync'
