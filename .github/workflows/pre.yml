@@ -15,18 +15,21 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest, windows-latest, macos-latest]
-        psbuilder-version: [1.0, main]
+        psbuilder-version: ["1.0", main]
     steps:
       - uses: actions/checkout@v2
       - name: setup PsBuilder
-        uses: psbuilder/setup@main
+        uses: actions/checkout@v2
         with:
-          version: ${{ matrix.psbuilder-version }}
+          branch: ${{ matrix.psbuilder-version }}
+          repository: psbuilder/psbuilder
+          path: builder
+          
       
       - name: Build and test
         run: |
           
-          ./PsBuilder.init.ps1
+          ./builder/PsBuilder.init.ps1
         shell: pwsh
   pre-release:
 
