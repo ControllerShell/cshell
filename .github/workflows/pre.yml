@@ -19,9 +19,11 @@ jobs:
         with:
           repository: psbuilder/psbuilder
           path: builder
-      - run: cd ./buil
+      
       - name: Build and test
-        run: ./build/PsBuilder.ps1
+        run: |
+          cd ./build
+          PsBuilder.init.ps1
         shell: pwsh
   pre-release:
 
