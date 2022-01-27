@@ -50,7 +50,9 @@ if (-not Test-Path $games/games) {
       Start-Sleep -s 2
       exit
     }
-    Add-Item $games/games --ItemType directory
+    # Configuration for slash, Depends on what OS ConShell is running on.
+    if ($IsWindows) { $slash = \ } else { $slash = / }
+    Add-Item $games$slash"games" --ItemType directory
   }
   else {
       echo "Welcome to CShell! The app çould not locate a workspace. Please create one in $games/games."
