@@ -52,12 +52,10 @@ if (-not Test-Path $games/games) {
     }
     Add-Item $games/games --ItemType directory
   }
-  else
-    {
+  else {
       echo "Welcome to CShell! The app çould not locate a workspace. Please create one in $games/games."
       while (!(Test-Path "$games/games")) { Start-Sleep 1 }
     }
-  
 }
 cd games
 # Installs required dependencies, usally the editor.
