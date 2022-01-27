@@ -1,3 +1,3 @@
 [Contribute](contributing) to the wiki.
 
-License: [GFDL](https://gnu.org/licenses/fdl-1.3.html).
+License: [FDL v1.3 or later](https://gnu.org/licenses/fdl-1.3.html).
