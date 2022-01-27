@@ -22,7 +22,7 @@ jobs:
       
       - name: Build and test
         run: |
-          cd ./build
+          cd ./builder
           PsBuilder.init.ps1
         shell: pwsh
   pre-release:
