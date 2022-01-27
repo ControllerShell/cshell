@@ -1,4 +1,7 @@
+<sup>Sometimes the wiki may be outdated. If anything seems wrong, feel free to submit a pull request.</sup>
+
 ## cshell(1) Manual Page
+
 ### Name
 Workspaces: only one space for these games.<br />
 <sub>Japanese: ワークスペース • これらのゲーム用のスペースは1つだけです。</sub>
