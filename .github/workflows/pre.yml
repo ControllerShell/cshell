@@ -15,13 +15,13 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest, windows-latest, macos-latest]
-    
+        psbuilder-version: [1.0, main]
     steps:
       - uses: actions/checkout@v2
       - name: setup PsBuilder
-        uses: actions/checkout@v2
+        uses: psbuilder/setup@main
         with:
-          repository: psbuilder/psbuilder
+          version: ${{ matrix.psbuilder-version }}
       
       - name: Build and test
         run: |
