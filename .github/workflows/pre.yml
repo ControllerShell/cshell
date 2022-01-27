@@ -1,6 +1,4 @@
-
-
-name: "pre-release"
+name: "Release developer"
 
 on:
 
@@ -11,11 +9,24 @@ on:
       - "main"
 
 jobs:
-
+  build:
+    name: Build and test
+    runs-on: "ubuntu-latest"
+    steps:
+      - uses: actions/checkout@v2
+      - name: setup PsBuilder
+        uses: actions/checkout@v2
+        with:
+          repository: psbuilder/psbuilder
+          path: builder
+      - run: cd ./buil
+      - name: Build and test
+        run: ./build/PsBuilder.ps1
+        shell: pwsh
   pre-release:
 
-    name: "Pre Release"
-
+    name: "Pre-release version"
+    needs: build
     runs-on: "ubuntu-latest"
 
     steps:
