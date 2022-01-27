@@ -19,7 +19,7 @@ cls
 Start-Sleep -ms 100
 # Stop if user is on Windows PowerShell. For the FOSS version of PowerShell, it should return "core". Try "echo $PSVersionTable.PSEdition".
 if ($PSVersionTable.PSEdition -ne "Core") {
-  Read-Host "Sorry, ControllerShell is currently only supported for PowerShell Core. Stay tuned for Windows PowerShell support. ;)
+  Read-Host "Sorry, ControllerShell is currently only supported for PowerShell Core. Stay tuned for Windows PowerShell support. ;)"
   exit
 }
 # Add a license agreement warning. This renders the BSD 2-clause license used by CShell.
