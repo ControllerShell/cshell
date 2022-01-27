@@ -11,20 +11,22 @@ on:
 jobs:
   build:
     name: Build and test
-    runs-on: "ubuntu-latest"
+    runs-on: "${{ matrix.os }}"
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+    
     steps:
       - uses: actions/checkout@v2
       - name: setup PsBuilder
         uses: actions/checkout@v2
         with:
           repository: psbuilder/psbuilder
-          path: builder
       
       - name: Build and test
         run: |
-          cd ./builder
-          $d = cd
-          $d/builder/PsBuilder.init.ps1
+          
+          ./PsBuilder.init.ps1
         shell: pwsh
   pre-release:
 
