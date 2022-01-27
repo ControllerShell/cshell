@@ -21,7 +21,7 @@ jobs:
       - name: setup PsBuilder
         uses: actions/checkout@v2
         with:
-          branch: ${{ matrix.psbuilder-version }}
+          ref: ${{ matrix.psbuilder-version }}
           repository: psbuilder/psbuilder
           path: builder
           
