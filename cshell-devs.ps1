@@ -34,18 +34,18 @@ echo "   1. Redistributions of source code must retain the above copyright notic
 echo "   2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution."
 
 echo "THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS ``AS IS`` AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE."
-echo "CShell uses PWSH vim, licensed under the MIT license: https://choosealicense.com/licenses/mit"
-Read-Host "Press Enter to accept this license."
+
+Read-Host "Press Enter to accept this license"
 cls
 echo "ConShell $v"
 $games = cd
 $test = Test-Path $games/games
 # Asks the user to set up the workspace. On Windows and macOS, this renders as
-# a message box. On GNU/Linux, the user must manually create the workspace.
+# a text box. On GNU/Linux, the user must manually create the workspace.
 if (-not "$test") {
-  if (-not $IsLinux) {
-    $Setup = Show-MessageBox "Welcome to CShell! The app could not locate a CShell workspace. Set up the workspace?" "ConShell" -Buttons YesNo -Icon Question
-    if ($Setup -eq No) { 
+  if (-not "$IsLinux") {
+    $Setup = Read-Host "Welcome! Type Yes to setup the workspace. Otherwise, type something else. CShell requires a workspace."
+    if ($Setup -ne "Yes") { 
       echo "You decided not to setup the workspace. CShell requires a workspace. Exiting."
 
       Start-Sleep -s 2
@@ -62,8 +62,7 @@ if (-not "$test") {
 }
 cd games
 # Installs required dependencies, usally the editor.
-echo "Installing dependencies"
-Install-Module vim -Force
+
 # List all games in the workspace.
 echo "GAMES:"
 Get-ChildItem -Path "$games/games" -Filter *.ps1 -r | % { $_.Name.Replace( ".ps1","") }
@@ -75,5 +74,5 @@ echo "# Welcome! ConShell is an open source game engine`n# for PowerShell.`n# He
 
 echo "Game created. Launching editor."
 Start-Sleep -s 3
-vim $name.ps1
+notepad $name".ps1"
 
