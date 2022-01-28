@@ -39,9 +39,10 @@ Read-Host "Press Enter to accept this license."
 cls
 echo "ConShell $v"
 $games = cd
+$test = Test-Path $games/games
 # Asks the user to set up the workspace. On Windows and macOS, this renders as
 # a message box. On GNU/Linux, the user must manually create the workspace.
-if (-not Test-Path $games/games) {
+if (-not "$test") {
   if (-not $IsLinux) {
     $Setup = Show-MessageBox "Welcome to CShell! The app could not locate a CShell workspace. Set up the workspace?" "ConShell" -Buttons YesNo -Icon Question
     if ($Setup -eq No) { 
