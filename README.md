@@ -34,7 +34,7 @@ Now, download the ZIP for CShell.
 Most people may find a prompt asking for confirmation:
 ![security prompt](defend.png)
 
-So, type `r` and press Enter.
+So, type `r` and press Enter, or extract the ZIP, cd the newly extacted folder's `cshell-main` subfolder and run `Unblock-File .cshell-devs.ps1`.
 
 Read the license. If you agree to it, press Enter.
 
