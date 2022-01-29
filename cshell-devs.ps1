@@ -68,14 +68,15 @@ for ($i = 1; $i -le 20; $i++ )
     Write-Host - -NoNewline
     Start-Sleep -ms 25
 }
-Get-ChildItem -Path "$global:games/games" -Filter *.ps1 -r | % { $_.Name.Replace( ".ps1","") }
+echo ""
+Get-ChildItem -Path "$global:games/games" -Filter *.ps1 -r | % { $_.Name.Replace( ".ps1"," (P") }
 # Adds an input requesting a user to add a new game to the workspace.
 $global:name = Read-Host 'Enter the name of the game to create or load'
 
-$exists = Test-Path -Path $global:games/$global:name.ps1
+$exists = Test-Path -Path $global:games"/"$global:name".ps1"
 if (-not $exists) {
   if($global:name -like '*ConShell*' -or $global:name -like '*ControllerShell*' -or $global:name -like '*CShell*') {
-      Write-Host 'Legal: The names of ControllerShell cannot be used in the name of games. Press enter to exit'
+      Write-Host 'Naming Error. The names of ControllerShell must not be used in the name of games.`nPlease only name games with no official names of ConShell since the names of the program are fully copyrighted.'
       pause
       cls
       Start-Sleep -ms 100
@@ -85,15 +86,10 @@ if (-not $exists) {
   echo "# Welcome! ConShell is an open source game engine`n# for PowerShell.`n# Here is a simple game for you.`necho Hello World!`necho Use ConShell to develop`necho simple powershell games." >> "$name.ps1"
   $logdate = Get-Date
   echo "---------------------------`nOn $logdate game created via ConShell`nGAME NAME: $global:name`nPATH: $global:games" >> cshell.log
-  for ($i = 1; $i -le 5; $i++ )
-  {
-    Write-Progress -Activity "Game created." -Status "Opening soon! $i seconds passed." -PercentComplete $i
-    Start-Sleep -Seconds 1
-  }
-  notepad "$global:name".ps1
+  echo "Inited empty CShell game in $global:games, name $global:name"
+  notepad $global:name.ps1
   return
 } else {
-  Write-Warning "The game $global:name already exists!"
   
   echo "Launching editor."
   notepad "$global:name".ps1
