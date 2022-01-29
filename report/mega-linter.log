@@ -10,7 +10,7 @@ The MegaLinter documentation can be found at:
 ----------------------------------------------------------------------------------------------------
 GITHUB_REPOSITORY: ControllerShell/cshell
 GITHUB_REF: refs/heads/main
-GITHUB_RUN_ID: 1766402576
+GITHUB_RUN_ID: 1766433205
 
 
 [Activation] EDITORCONFIG_EDITORCONFIG_CHECKER has been set inactive, as none of these files has been found: ['.editorconfig']
@@ -76,14 +76,14 @@ Kept [11] files on [12] found files
 /github/workspace/wiki/Home.md:1 MD041/first-line-heading/first-line-h1 First line in a file should be a top-level heading [Context: "## cshell(1) Manual Page"]
 /github/workspace/wiki/Workspace.md:1 MD041/first-line-heading/first-line-h1 First line in a file should be a top-level heading [Context: "<sup>Sometimes the wiki may be..."]
 
-[33m✅ Linted [MARKDOWN] files with [markdownlint]: Found 5 non blocking error(s) - (0.45s)[0m
-[Text Reporter] Generated TEXT report: /github/workspace/report/linters_logs/WARNING-MARKDOWN_MARKDOWNLINT.log
+[33m✅ Linted [MARKDOWN] files with [markdownlint]: Found 5 non blocking error(s) - (0.36s)[0m
 
 [1m### Processed [CREDENTIALS] files[0m
 - Using [secretlint v4.1.0] https://megalinter.github.io/v5/descriptors/credentials_secretlint
 - MegaLinter key: [CREDENTIALS_SECRETLINT]
 - Rules config: [.secretlintrc.json]
-[32m✅ Linted [CREDENTIALS] files with [secretlint] successfully - (1.29s)[0m
+[32m✅ Linted [CREDENTIALS] files with [secretlint] successfully - (1.03s)[0m
+[Text Reporter] Generated TEXT report: /github/workspace/report/linters_logs/WARNING-MARKDOWN_MARKDOWNLINT.log
 [Text Reporter] Generated TEXT report: /github/workspace/report/linters_logs/SUCCESS-CREDENTIALS_SECRETLINT.log
 
 [1m### Processed [MARKDOWN] files[0m
@@ -95,7 +95,7 @@ Kept [11] files on [12] found files
 [markdown-table-formatter] wiki/Home.md
 [markdown-table-formatter] wiki/Workspace.md
 [markdown-table-formatter] wiki/_Footer.md
-[32m✅ Linted [MARKDOWN] files with [markdown-table-formatter] successfully - (0.32s)[0m
+[32m✅ Linted [MARKDOWN] files with [markdown-table-formatter] successfully - (0.28s)[0m
 [Text Reporter] Generated TEXT report: /github/workspace/report/linters_logs/SUCCESS-MARKDOWN_MARKDOWN_TABLE_FORMATTER.log
 
 [1m### Processed [MARKDOWN] files[0m
@@ -128,7 +128,7 @@ FILE: /github/workspace/wiki/_Footer.md
   ERROR: 1 dead links found!
   [✖] contributing-to-the-wiki → Status: 400
 [0m
-[31m❌ Linted [MARKDOWN] files with [markdown-link-check]: Found 2 error(s) - (2.01s)[0m
+[31m❌ Linted [MARKDOWN] files with [markdown-link-check]: Found 2 error(s) - (1.76s)[0m
 [Text Reporter] Generated TEXT report: /github/workspace/report/linters_logs/ERROR-MARKDOWN_MARKDOWN_LINK_CHECK.log
 
 [1m### Processed [YAML] files[0m
@@ -144,46 +144,7 @@ Checking formatting...
 [warn] .github/workflows/wiki.yml
 [warn] Code style issues found in the above file(s). Forgot to run Prettier?
 
-[33m✅ Linted [YAML] files with [prettier]: Found 1 non blocking error(s) - (1.2s)[0m
-[Text Reporter] Generated TEXT report: /github/workspace/report/linters_logs/WARNING-YAML_PRETTIER.log
-
-[1m### Processed [YAML] files[0m
-- Using [yamllint v1.26.3] https://megalinter.github.io/v5/descriptors/yaml_yamllint
-- MegaLinter key: [YAML_YAMLLINT]
-- Rules config: [.yamllint.yml]
-[yamllint] .github/workflows/pre.yml
-[yamllint] .github/workflows/server.yml
-[yamllint] .github/workflows/wiki.yml
---Error detail:
-::warning file=/github/workspace/.github/workflows/pre.yml,line=1,col=1::[document-start] missing document start "---"
-::warning file=/github/workspace/.github/workflows/pre.yml,line=3,col=1::[truthy] truthy value should be one of [false, true]
-::error file=/github/workspace/.github/workflows/pre.yml,line=27,col=1::[trailing-spaces] trailing spaces
-::error file=/github/workspace/.github/workflows/pre.yml,line=28,col=1::[trailing-spaces] trailing spaces
-::error file=/github/workspace/.github/workflows/pre.yml,line=31,col=1::[trailing-spaces] trailing spaces
-::warning file=/github/workspace/.github/workflows/pre.yml,line=60,col=104::[comments] too few spaces before comment
-::warning file=/github/workspace/.github/workflows/pre.yml,line=66,col=36::[comments] too few spaces before comment
-::error file=/github/workspace/.github/workflows/pre.yml,line=136,col=1::[trailing-spaces] trailing spaces
-::error file=/github/workspace/.github/workflows/pre.yml,line=137,col=1::[trailing-spaces] trailing spaces
-::warning file=/github/workspace/.github/workflows/server.yml,line=1,col=1::[document-start] missing document start "---"
-::warning file=/github/workspace/.github/workflows/server.yml,line=1,col=1::[truthy] truthy value should be one of [false, true]
-::warning file=/github/workspace/.github/workflows/wiki.yml,line=1,col=1::[document-start] missing document start "---"
-::warning file=/github/workspace/.github/workflows/wiki.yml,line=1,col=1::[truthy] truthy value should be one of [false, true]
-::error file=/github/workspace/.github/workflows/wiki.yml,line=9,col=1::[trailing-spaces] trailing spaces
-::error file=/github/workspace/.github/workflows/wiki.yml,line=10,col=1::[trailing-spaces] trailing spaces
-::error file=/github/workspace/.github/workflows/wiki.yml,line=22,col=11::[indentation] wrong indentation: expected 12 but found 10
-
-[31m❌ Linted [YAML] files with [yamllint]: Found 1 error(s) - (0.18s)[0m
-[Text Reporter] Generated TEXT report: /github/workspace/report/linters_logs/ERROR-YAML_YAMLLINT.log
-
-[1m### Processed [YAML] files[0m
-- Using [v8r v0.6.1] https://megalinter.github.io/v5/descriptors/yaml_v8r
-- MegaLinter key: [YAML_V8R]
-- Rules config: identified by [v8r]
-[v8r] .github/workflows/pre.yml - SUCCESS - 0 error(s)
-[v8r] .github/workflows/server.yml - SUCCESS - 0 error(s)
-[v8r] .github/workflows/wiki.yml - SUCCESS - 0 error(s)
-[32m✅ Linted [YAML] files with [v8r] successfully - (2.38s)[0m
-[Text Reporter] Generated TEXT report: /github/workspace/report/linters_logs/SUCCESS-YAML_V8R.log
+[33m✅ Linted [YAML] files with [prettier]: Found 1 non blocking error(s) - (1.11s)[0m
 
 [1m### Processed [POWERSHELL] files[0m
 - Using [powershell v7.2.1] https://megalinter.github.io/v5/descriptors/powershell_powershell
@@ -798,37 +759,18 @@ PSAvoidUsingCmdletAliases           Warning      cshell-dev 98    'echo' is an
 
 [32;1mRuleName                            Severity     ScriptName Line  Message[0m
 [32;1m--------                            --------     ---------- ----  -------[0m
-PSAvoidGlobalVars                   Warning      cshell-ser 6     Found global
+PSAvoidGlobalVars                   Warning      cshell-ser 7     Found global
                                                  vers.ps1         variable 'glo
                                                                   bal:Id'.
-PSAvoidGlobalVars                   Warning      cshell-ser 8     Found global
+PSAvoidGlobalVars                   Warning      cshell-ser 7     Found global
                                                  vers.ps1         variable 'glo
                                                                   bal:Id'.
-PSAvoidGlobalVars                   Warning      cshell-ser 9     Found global
+PSAvoidGlobalVars                   Warning      cshell-ser 10    Found global
                                                  vers.ps1         variable 'glo
                                                                   bal:Id'.
-PSAvoidUsingWriteHost               Warning      cshell-ser 4     File 'cshell-
-                                                 vers.ps1         servers.ps1'
-                                                                  uses Write-Ho
-                                                                  st. Avoid usi
-                                                                  ng Write-Host
-                                                                   because it m
-                                                                  ight not work
-                                                                   in all hosts
-                                                                  , does not wo
-                                                                  rk when there
-                                                                   is no host,
-                                                                  and (prior to
-                                                                   PS 5.0) cann
-                                                                  ot be suppres
-                                                                  sed, captured
-                                                                  , or redirect
-                                                                  ed. Instead,
-                                                                  use Write-Out
-                                                                  put, Write-Ve
-                                                                  rbose, or Wri
-                                                                  te-Informatio
-                                                                  n.
+PSAvoidGlobalVars                   Warning      cshell-ser 11    Found global
+                                                 vers.ps1         variable 'glo
+                                                                  bal:Id'.
 PSAvoidUsingCmdletAliases           Warning      cshell-ser 1     'echo' is an
                                                  vers.ps1         alias of 'Wri
                                                                   te-Output'. A
@@ -855,7 +797,7 @@ PSAvoidUsingCmdletAliases           Warning      cshell-ser 2     'echo' is an
                                                                   nging alias t
                                                                   o its full co
                                                                   ntent.
-PSAvoidUsingCmdletAliases           Warning      cshell-ser 6     'echo' is an
+PSAvoidUsingCmdletAliases           Warning      cshell-ser 10    'echo' is an
                                                  vers.ps1         alias of 'Wri
                                                                   te-Output'. A
                                                                   lias can intr
@@ -868,7 +810,7 @@ PSAvoidUsingCmdletAliases           Warning      cshell-ser 6     'echo' is an
                                                                   nging alias t
                                                                   o its full co
                                                                   ntent.
-PSAvoidUsingCmdletAliases           Warning      cshell-ser 8     'echo' is an
+PSAvoidUsingCmdletAliases           Warning      cshell-ser 11    'echo' is an
                                                  vers.ps1         alias of 'Wri
                                                                   te-Output'. A
                                                                   lias can intr
@@ -881,44 +823,92 @@ PSAvoidUsingCmdletAliases           Warning      cshell-ser 8     'echo' is an
                                                                   nging alias t
                                                                   o its full co
                                                                   ntent.
-PSAvoidUsingCmdletAliases           Warning      cshell-ser 9     'echo' is an
-                                                 vers.ps1         alias of 'Wri
-                                                                  te-Output'. A
-                                                                  lias can intr
-                                                                  oduce possibl
-                                                                  e problems an
-                                                                  d make script
-                                                                  s hard to mai
-                                                                  ntain. Please
-                                                                   consider cha
-                                                                  nging alias t
-                                                                  o its full co
-                                                                  ntent.
+PSAvoidUsingWriteHost               Warning      cshell-ser 4     File 'cshell-
+                                                 vers.ps1         servers.ps1'
+                                                                  uses Write-Ho
+                                                                  st. Avoid usi
+                                                                  ng Write-Host
+                                                                   because it m
+                                                                  ight not work
+                                                                   in all hosts
+                                                                  , does not wo
+                                                                  rk when there
+                                                                   is no host,
+                                                                  and (prior to
+                                                                   PS 5.0) cann
+                                                                  ot be suppres
+                                                                  sed, captured
+                                                                  , or redirect
+                                                                  ed. Instead,
+                                                                  use Write-Out
+                                                                  put, Write-Ve
+                                                                  rbose, or Wri
+                                                                  te-Informatio
+                                                                  n.
 
 [0m
-[31m❌ Linted [POWERSHELL] files with [powershell]: Found 2 error(s) - (10.69s)[0m
+[31m❌ Linted [POWERSHELL] files with [powershell]: Found 2 error(s) - (2.63s)[0m
+[Text Reporter] Generated TEXT report: /github/workspace/report/linters_logs/WARNING-YAML_PRETTIER.log
+
+[1m### Processed [YAML] files[0m
+- Using [yamllint v1.26.3] https://megalinter.github.io/v5/descriptors/yaml_yamllint
+- MegaLinter key: [YAML_YAMLLINT]
+- Rules config: [.yamllint.yml]
+[yamllint] .github/workflows/pre.yml
+[yamllint] .github/workflows/server.yml
+[yamllint] .github/workflows/wiki.yml
+--Error detail:
+::warning file=/github/workspace/.github/workflows/pre.yml,line=1,col=1::[document-start] missing document start "---"
+::warning file=/github/workspace/.github/workflows/pre.yml,line=3,col=1::[truthy] truthy value should be one of [false, true]
+::error file=/github/workspace/.github/workflows/pre.yml,line=27,col=1::[trailing-spaces] trailing spaces
+::error file=/github/workspace/.github/workflows/pre.yml,line=28,col=1::[trailing-spaces] trailing spaces
+::error file=/github/workspace/.github/workflows/pre.yml,line=31,col=1::[trailing-spaces] trailing spaces
+::warning file=/github/workspace/.github/workflows/pre.yml,line=60,col=104::[comments] too few spaces before comment
+::warning file=/github/workspace/.github/workflows/pre.yml,line=66,col=36::[comments] too few spaces before comment
+::error file=/github/workspace/.github/workflows/pre.yml,line=136,col=1::[trailing-spaces] trailing spaces
+::error file=/github/workspace/.github/workflows/pre.yml,line=137,col=1::[trailing-spaces] trailing spaces
+::warning file=/github/workspace/.github/workflows/server.yml,line=1,col=1::[document-start] missing document start "---"
+::warning file=/github/workspace/.github/workflows/server.yml,line=1,col=1::[truthy] truthy value should be one of [false, true]
+::warning file=/github/workspace/.github/workflows/wiki.yml,line=1,col=1::[document-start] missing document start "---"
+::warning file=/github/workspace/.github/workflows/wiki.yml,line=1,col=1::[truthy] truthy value should be one of [false, true]
+::error file=/github/workspace/.github/workflows/wiki.yml,line=9,col=1::[trailing-spaces] trailing spaces
+::error file=/github/workspace/.github/workflows/wiki.yml,line=10,col=1::[trailing-spaces] trailing spaces
+::error file=/github/workspace/.github/workflows/wiki.yml,line=22,col=11::[indentation] wrong indentation: expected 12 but found 10
+
+[31m❌ Linted [YAML] files with [yamllint]: Found 1 error(s) - (0.15s)[0m
 [Text Reporter] Generated TEXT report: /github/workspace/report/linters_logs/ERROR-POWERSHELL_POWERSHELL.log
+[Text Reporter] Generated TEXT report: /github/workspace/report/linters_logs/ERROR-YAML_YAMLLINT.log
+
+[1m### Processed [YAML] files[0m
+- Using [v8r v0.6.1] https://megalinter.github.io/v5/descriptors/yaml_v8r
+- MegaLinter key: [YAML_V8R]
+- Rules config: identified by [v8r]
+[v8r] .github/workflows/pre.yml - SUCCESS - 0 error(s)
+[v8r] .github/workflows/server.yml - SUCCESS - 0 error(s)
+[v8r] .github/workflows/wiki.yml - SUCCESS - 0 error(s)
+[32m✅ Linted [YAML] files with [v8r] successfully - (2.28s)[0m
+[Text Reporter] Generated TEXT report: /github/workspace/report/linters_logs/SUCCESS-YAML_V8R.log
 
 +----SUMMARY-----+--------------------------+---------------+-------+-------+--------+--------------+
 | Descriptor     | Linter                   | Mode          | Files | Fixed | Errors | Elapsed time |
 +----------------+--------------------------+---------------+-------+-------+--------+--------------+
 | ✅ ACTION      | actionlint               | list_of_files |     3 |       |      0 |        0.02s |
-| ✅ CREDENTIALS | secretlint               | project       |   n/a |       |      0 |        1.29s |
+| ✅ CREDENTIALS | secretlint               | project       |   n/a |       |      0 |        1.03s |
 | ✅ GIT         | git_diff                 | project       |   n/a |       |      0 |        0.01s |
-| ◬ MARKDOWN     | markdownlint             | list_of_files |     5 |       |      5 |        0.45s |
-| ❌ MARKDOWN    | markdown-link-check      | file          |     5 |       |      2 |        2.01s |
-| ✅ MARKDOWN    | markdown-table-formatter | list_of_files |     5 |       |      0 |        0.32s |
-| ❌ POWERSHELL  | powershell               | file          |     2 |       |      2 |       10.69s |
-| ◬ YAML         | prettier                 | list_of_files |     3 |       |      1 |         1.2s |
-| ✅ YAML        | v8r                      | file          |     3 |       |      0 |        2.38s |
-| ❌ YAML        | yamllint                 | list_of_files |     3 |       |      1 |        0.18s |
+| ◬ MARKDOWN     | markdownlint             | list_of_files |     5 |       |      5 |        0.36s |
+| ❌ MARKDOWN    | markdown-link-check      | file          |     5 |       |      2 |        1.76s |
+| ✅ MARKDOWN    | markdown-table-formatter | list_of_files |     5 |       |      0 |        0.28s |
+| ❌ POWERSHELL  | powershell               | file          |     2 |       |      2 |        2.63s |
+| ◬ YAML         | prettier                 | list_of_files |     3 |       |      1 |        1.11s |
+| ✅ YAML        | v8r                      | file          |     3 |       |      0 |        2.28s |
+| ❌ YAML        | yamllint                 | list_of_files |     3 |       |      1 |        0.15s |
 +----------------+--------------------------+---------------+-------+-------+--------+--------------+
 
 [34mYou could have same capabilities but better runtime performances if you use a MegaLinter flavor:[0m
 - [dotnet] megalinter/megalinter/flavors/dotnet@v5 (47 linters) https://megalinter.github.io/flavors/dotnet/
 
 [GitHub Comment Reporter] No pull request was found, so no comment has been posted
-[Updated Sources Reporter] copied 4 fixed source files in folder /github/workspace/report/updated_sources.
+[Updated Sources Reporter] copied 2 fixed source files in folder /github/workspace/report/updated_sources.
 Download it from artifacts then copy-paste it in your local repo to apply linters updates
 [31m❌ Error(s) have been found during linting[0m
 To disable linters or customize their checks, you can use a .mega-linter.yml file at the root of your repository
