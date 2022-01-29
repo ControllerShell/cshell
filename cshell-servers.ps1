@@ -1,6 +1,6 @@
 echo "ConShell Server Edition"
 echo "Generating ID of game"
-l {
+for ($i = 1; $i -le 30; $i++ ) {
   Write-Host "." -NoNewline
   $r = Get-Random -Minimum 3 -Maximum 10
   $r2 = Get-Random -Minimum 50 -Maximum 125
