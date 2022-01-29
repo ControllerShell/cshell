@@ -1,2 +1,0 @@
-==CShell Wiki==
-This wiki is intended to help you get started with ''ControllerShsll''. We recommend visiting the wiki before getting started with ConShell.
