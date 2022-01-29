@@ -32,7 +32,7 @@ If you do not have chocolatey, see the instructions at https://chocolatey.org/in
 
 Now, download the ZIP for CShell.
 Most people may find a prompt asking for confirmation:
-![security prompt](defender.png)
+![security prompt](defend.png)
 
 So, type `r` and press Enter.
 
