@@ -1,0 +1,914 @@
+----------------------------------------------------------------------------------------------------
+-------------------------------------------- MegaLinter --------------------------------------------
+----------------------------------------------------------------------------------------------------
+ - Image Creation Date: 2022-01-22T21:11:37Z
+ - Image Revision: 037fb95a
+ - Image Version: v5
+----------------------------------------------------------------------------------------------------
+The MegaLinter documentation can be found at:
+ - https://megalinter.github.io
+----------------------------------------------------------------------------------------------------
+GITHUB_REPOSITORY: ControllerShell/cshell
+GITHUB_REF: refs/heads/main
+GITHUB_RUN_ID: 1766389157
+
+
+[Activation] EDITORCONFIG_EDITORCONFIG_CHECKER has been set inactive, as none of these files has been found: ['.editorconfig']
+[Activation] JAVASCRIPT_ES has been set inactive, as none of these files has been found: ['.eslintrc.json', '.eslintrc.yml', '.eslintrc.yaml', '.eslintrc.js', '.eslintrc.cjs']
+[Activation] JSX_ESLINT has been set inactive, as none of these files has been found: ['.eslintrc.json', '.eslintrc.yml', '.eslintrc.yaml', '.eslintrc.js', '.eslintrc.cjs']
+[Activation] SWIFT_SWIFTLINT has been set inactive, as none of these files has been found: ['.swiftlint.yml']
+[Activation] TSX_ESLINT has been set inactive, as none of these files has been found: ['.eslintrc.json', '.eslintrc.yml', '.eslintrc.yaml', '.eslintrc.js', '.eslintrc.cjs']
+[Activation] TYPESCRIPT_ES has been set inactive, as none of these files has been found: ['.eslintrc.json', '.eslintrc.yml', '.eslintrc.yaml', '.eslintrc.js', '.eslintrc.cjs']
+Skipped linters: ANSIBLE_ANSIBLE_LINT, COPYPASTE_JSCPD, EDITORCONFIG_EDITORCONFIG_CHECKER, JAVASCRIPT_ES, JAVASCRIPT_PRETTIER, JSX_ESLINT, KUBERNETES_KUBEVAL, MARKDOWN_REMARK_LINT, SALESFORCE_SFDX_SCANNER_APEX, SALESFORCE_SFDX_SCANNER_AURA, SALESFORCE_SFDX_SCANNER_LWC, SPELL_CSPELL, SPELL_MISSPELL, SWIFT_SWIFTLINT, TSX_ESLINT, TYPESCRIPT_ES, TYPESCRIPT_PRETTIER
+To receive reports as email, please set variable EMAIL_REPORTER_EMAIL
+Listing all files in directory [/github/workspace], then filter with:
+- File extensions: , .R, .RMD, .Rmd, .bash, .c, .c++, .cc, .cdxml, .clj, .cljc, .cljs, .coffee, .cpp, .cs, .css, .cu, .cuh, .cxx, .dart, .dash, .edn, .env, .feature, .go, .gradle, .graphql, .groovy, .gvy, .h, .h++, .hcl, .hh, .hpp, .htm, .html, .hxx, .java, .js, .json, .json5, .jsonc, .ksh, .kt, .kts, .lua, .md, .nf, .p6, .php, .pl, .pl6, .pm, .pm6, .pp, .proto, .ps1, .ps1xml, .psd1, .psm1, .psrc, .pssc, .py, .r, .raku, .rakumod, .rakutest, .rb, .rs, .rst, .saas, .scala, .scss, .sh, .smk, .sql, .t, .tex, .tf, .ts, .vb, .xml, .yaml, .yml
+- File names (regex): Dockerfile, Jenkinsfile, Snakefile
+- Excluding .gitignored files [0]: 
+Kept [10] files on [11] found files
+
++----MATCHING LINTERS--------------------+---------------------------------------------+----------------+------------+
+| Descriptor  | Linter                   | Criteria                                    | Matching files | Format/Fix |
++-------------+--------------------------+---------------------------------------------+----------------+------------+
+| ACTION      | actionlint               | .yml|.yaml                                  | 2              | no         |
+| CREDENTIALS | secretlint               |                                             | project        | no         |
+| GIT         | git_diff                 |                                             | project        | no         |
+| MARKDOWN    | markdownlint             | .md                                         | 5              | no         |
+| MARKDOWN    | markdown-link-check      | .md                                         | 5              | no         |
+| MARKDOWN    | markdown-table-formatter | .md                                         | 5              | no         |
+| POWERSHELL  | powershell               | .ps1|.psm1|.psd1|.ps1xml|.pssc|.psrc|.cdxml | 2              | no         |
+| YAML        | prettier                 | .yml|.yaml                                  | 2              | no         |
+| YAML        | yamllint                 | .yml|.yaml                                  | 2              | no         |
+| YAML        | v8r                      | .yml|.yaml                                  | 2              | no         |
++-------------+--------------------------+---------------------------------------------+----------------+------------+
+
+
+[1m### Processed [ACTION] files[0m
+- Using [actionlint v1.6.8] https://megalinter.github.io/v5/descriptors/action_actionlint
+- MegaLinter key: [ACTION_ACTIONLINT]
+- Rules config: identified by [actionlint]
+[actionlint] .github/workflows/pre.yml
+[actionlint] .github/workflows/wiki.yml
+[32m✅ Linted [ACTION] files with [actionlint] successfully - (0.02s)[0m
+[Text Reporter] Generated TEXT report: /github/workspace/report/linters_logs/SUCCESS-ACTION_ACTIONLINT.log
+
+[1m### Processed [GIT] files[0m
+- Using [git_diff v2.30.2] https://megalinter.github.io/v5/descriptors/git_git_diff
+- MegaLinter key: [GIT_GIT_DIFF]
+- Rules config: identified by [git_diff]
+[32m✅ Linted [GIT] files with [git_diff] successfully - (0.01s)[0m
+[Text Reporter] Generated TEXT report: /github/workspace/report/linters_logs/SUCCESS-GIT_GIT_DIFF.log
+
+[1m### Processed [MARKDOWN] files[0m
+- Using [markdownlint v0.30.0] https://megalinter.github.io/v5/descriptors/markdown_markdownlint
+- MegaLinter key: [MARKDOWN_MARKDOWNLINT]
+- Rules config: [.markdownlint.json]
+[markdownlint] README.md
+[markdownlint] wiki/Contributing to the wiki.md
+[markdownlint] wiki/Home.md
+[markdownlint] wiki/Workspace.md
+[markdownlint] wiki/_Footer.md
+--Error detail:
+/github/workspace/wiki/_Footer.md:1 MD041/first-line-heading/first-line-h1 First line in a file should be a top-level heading [Context: "[Contribute](contributing-to-t..."]
+/github/workspace/wiki/Contributing to the wiki.md:1:63 MD034/no-bare-urls Bare URL used [Context: "https://github.com/ControllerS..."]
+/github/workspace/wiki/Contributing to the wiki.md:1 MD041/first-line-heading/first-line-h1 First line in a file should be a top-level heading [Context: "It is possible to contribute t..."]
+/github/workspace/wiki/Home.md:1 MD041/first-line-heading/first-line-h1 First line in a file should be a top-level heading [Context: "## cshell(1) Manual Page"]
+/github/workspace/wiki/Workspace.md:1 MD041/first-line-heading/first-line-h1 First line in a file should be a top-level heading [Context: "<sup>Sometimes the wiki may be..."]
+
+[33m✅ Linted [MARKDOWN] files with [markdownlint]: Found 5 non blocking error(s) - (0.4s)[0m
+[Text Reporter] Generated TEXT report: /github/workspace/report/linters_logs/WARNING-MARKDOWN_MARKDOWNLINT.log
+
+[1m### Processed [CREDENTIALS] files[0m
+- Using [secretlint v4.1.0] https://megalinter.github.io/v5/descriptors/credentials_secretlint
+- MegaLinter key: [CREDENTIALS_SECRETLINT]
+- Rules config: [.secretlintrc.json]
+[32m✅ Linted [CREDENTIALS] files with [secretlint] successfully - (1.08s)[0m
+[Text Reporter] Generated TEXT report: /github/workspace/report/linters_logs/SUCCESS-CREDENTIALS_SECRETLINT.log
+
+[1m### Processed [MARKDOWN] files[0m
+- Using [markdown-table-formatter v1.2.0] https://megalinter.github.io/v5/descriptors/markdown_markdown_table_formatter
+- MegaLinter key: [MARKDOWN_MARKDOWN_TABLE_FORMATTER]
+- Rules config: identified by [markdown-table-formatter]
+[markdown-table-formatter] README.md
+[markdown-table-formatter] wiki/Contributing to the wiki.md
+[markdown-table-formatter] wiki/Home.md
+[markdown-table-formatter] wiki/Workspace.md
+[markdown-table-formatter] wiki/_Footer.md
+[32m✅ Linted [MARKDOWN] files with [markdown-table-formatter] successfully - (0.31s)[0m
+[Text Reporter] Generated TEXT report: /github/workspace/report/linters_logs/SUCCESS-MARKDOWN_MARKDOWN_TABLE_FORMATTER.log
+
+[1m### Processed [MARKDOWN] files[0m
+- Using [markdown-link-check v3.9.2] https://megalinter.github.io/v5/descriptors/markdown_markdown_link_check
+- MegaLinter key: [MARKDOWN_MARKDOWN_LINK_CHECK]
+- Rules config: [.markdown-link-check.json]
+[markdown-link-check] README.md - SUCCESS - 0 error(s)
+[markdown-link-check] wiki/Contributing to the wiki.md - SUCCESS - 0 error(s)
+[31m[markdown-link-check] wiki/Home.md - ERROR - 1 error(s)[0m
+[31m--Error detail:
+
+FILE: /github/workspace/wiki/Home.md
+  [✖] workspace
+
+  1 links checked.
+
+  ERROR: 1 dead links found!
+  [✖] workspace → Status: 400
+[0m
+[markdown-link-check] wiki/Workspace.md - SUCCESS - 0 error(s)
+[31m[markdown-link-check] wiki/_Footer.md - ERROR - 1 error(s)[0m
+[31m--Error detail:
+
+FILE: /github/workspace/wiki/_Footer.md
+  [✖] contributing-to-the-wiki
+  [✓] https://gnu.org/licenses/fdl-1.3.html
+
+  2 links checked.
+
+  ERROR: 1 dead links found!
+  [✖] contributing-to-the-wiki → Status: 400
+[0m
+[31m❌ Linted [MARKDOWN] files with [markdown-link-check]: Found 2 error(s) - (2.0s)[0m
+[Text Reporter] Generated TEXT report: /github/workspace/report/linters_logs/ERROR-MARKDOWN_MARKDOWN_LINK_CHECK.log
+
+[1m### Processed [YAML] files[0m
+- Using [prettier v2.5.1] https://megalinter.github.io/v5/descriptors/yaml_prettier
+- MegaLinter key: [YAML_PRETTIER]
+- Rules config: identified by [prettier]
+[prettier] .github/workflows/pre.yml
+[prettier] .github/workflows/wiki.yml
+--Error detail:
+Checking formatting...
+[warn] .github/workflows/pre.yml
+[warn] .github/workflows/wiki.yml
+[warn] Code style issues found in the above file(s). Forgot to run Prettier?
+
+[33m✅ Linted [YAML] files with [prettier]: Found 1 non blocking error(s) - (1.23s)[0m
+[Text Reporter] Generated TEXT report: /github/workspace/report/linters_logs/WARNING-YAML_PRETTIER.log
+
+[1m### Processed [YAML] files[0m
+- Using [yamllint v1.26.3] https://megalinter.github.io/v5/descriptors/yaml_yamllint
+- MegaLinter key: [YAML_YAMLLINT]
+- Rules config: [.yamllint.yml]
+[yamllint] .github/workflows/pre.yml
+[yamllint] .github/workflows/wiki.yml
+--Error detail:
+::warning file=/github/workspace/.github/workflows/pre.yml,line=1,col=1::[document-start] missing document start "---"
+::warning file=/github/workspace/.github/workflows/pre.yml,line=3,col=1::[truthy] truthy value should be one of [false, true]
+::error file=/github/workspace/.github/workflows/pre.yml,line=27,col=1::[trailing-spaces] trailing spaces
+::error file=/github/workspace/.github/workflows/pre.yml,line=28,col=1::[trailing-spaces] trailing spaces
+::error file=/github/workspace/.github/workflows/pre.yml,line=31,col=1::[trailing-spaces] trailing spaces
+::warning file=/github/workspace/.github/workflows/pre.yml,line=60,col=104::[comments] too few spaces before comment
+::warning file=/github/workspace/.github/workflows/pre.yml,line=66,col=36::[comments] too few spaces before comment
+::error file=/github/workspace/.github/workflows/pre.yml,line=136,col=1::[trailing-spaces] trailing spaces
+::error file=/github/workspace/.github/workflows/pre.yml,line=137,col=1::[trailing-spaces] trailing spaces
+::warning file=/github/workspace/.github/workflows/wiki.yml,line=1,col=1::[document-start] missing document start "---"
+::warning file=/github/workspace/.github/workflows/wiki.yml,line=1,col=1::[truthy] truthy value should be one of [false, true]
+::error file=/github/workspace/.github/workflows/wiki.yml,line=9,col=1::[trailing-spaces] trailing spaces
+::error file=/github/workspace/.github/workflows/wiki.yml,line=10,col=1::[trailing-spaces] trailing spaces
+::error file=/github/workspace/.github/workflows/wiki.yml,line=22,col=11::[indentation] wrong indentation: expected 12 but found 10
+
+[31m❌ Linted [YAML] files with [yamllint]: Found 1 error(s) - (0.16s)[0m
+[Text Reporter] Generated TEXT report: /github/workspace/report/linters_logs/ERROR-YAML_YAMLLINT.log
+
+[1m### Processed [YAML] files[0m
+- Using [v8r v0.6.1] https://megalinter.github.io/v5/descriptors/yaml_v8r
+- MegaLinter key: [YAML_V8R]
+- Rules config: identified by [v8r]
+[v8r] .github/workflows/pre.yml - SUCCESS - 0 error(s)
+[v8r] .github/workflows/wiki.yml - SUCCESS - 0 error(s)
+[32m✅ Linted [YAML] files with [v8r] successfully - (1.97s)[0m
+[Text Reporter] Generated TEXT report: /github/workspace/report/linters_logs/SUCCESS-YAML_V8R.log
+
+[1m### Processed [POWERSHELL] files[0m
+- Using [powershell v7.2.1] https://megalinter.github.io/v5/descriptors/powershell_powershell
+- MegaLinter key: [POWERSHELL_POWERSHELL]
+- Rules config: [.powershell-psscriptanalyzer.psd1]
+[31m[powershell] cshell-devs.ps1 - ERROR - 1 error(s)[0m
+[31m--Error detail:
+
+[32;1mRuleName                            Severity     ScriptName Line  Message[0m
+[32;1m--------                            --------     ---------- ----  -------[0m
+PSAvoidGlobalVars                   Warning      cshell-dev 52    Found global
+                                                 s.ps1            variable 'glo
+                                                                  bal:games'.
+PSAvoidGlobalVars                   Warning      cshell-dev 53    Found global
+                                                 s.ps1            variable 'glo
+                                                                  bal:games'.
+PSAvoidGlobalVars                   Warning      cshell-dev 56    Found global
+                                                 s.ps1            variable 'glo
+                                                                  bal:games'.
+PSAvoidGlobalVars                   Warning      cshell-dev 59    Found global
+                                                 s.ps1            variable 'glo
+                                                                  bal:games'.
+PSAvoidGlobalVars                   Warning      cshell-dev 65    Found global
+                                                 s.ps1            variable 'glo
+                                                                  bal:games'.
+PSAvoidGlobalVars                   Warning      cshell-dev 71    Found global
+                                                 s.ps1            variable 'glo
+                                                                  bal:games'.
+PSAvoidGlobalVars                   Warning      cshell-dev 73    Found global
+                                                 s.ps1            variable 'glo
+                                                                  bal:name'.
+PSAvoidGlobalVars                   Warning      cshell-dev 75    Found global
+                                                 s.ps1            variable 'glo
+                                                                  bal:games'.
+PSAvoidGlobalVars                   Warning      cshell-dev 75    Found global
+                                                 s.ps1            variable 'glo
+                                                                  bal:name'.
+PSAvoidGlobalVars                   Warning      cshell-dev 77    Found global
+                                                 s.ps1            variable 'glo
+                                                                  bal:name'.
+PSAvoidGlobalVars                   Warning      cshell-dev 77    Found global
+                                                 s.ps1            variable 'glo
+                                                                  bal:name'.
+PSAvoidGlobalVars                   Warning      cshell-dev 77    Found global
+                                                 s.ps1            variable 'glo
+                                                                  bal:name'.
+PSAvoidGlobalVars                   Warning      cshell-dev 87    Found global
+                                                 s.ps1            variable 'glo
+                                                                  bal:name'.
+PSAvoidGlobalVars                   Warning      cshell-dev 87    Found global
+                                                 s.ps1            variable 'glo
+                                                                  bal:games'.
+PSAvoidGlobalVars                   Warning      cshell-dev 93    Found global
+                                                 s.ps1            variable 'glo
+                                                                  bal:name'.
+PSAvoidGlobalVars                   Warning      cshell-dev 96    Found global
+                                                 s.ps1            variable 'glo
+                                                                  bal:name'.
+PSAvoidGlobalVars                   Warning      cshell-dev 99    Found global
+                                                 s.ps1            variable 'glo
+                                                                  bal:name'.
+PSAvoidTrailingWhitespace           Information  cshell-dev 2     Line has trai
+                                                 s.ps1            ling whitespa
+                                                                  ce
+PSAvoidTrailingWhitespace           Information  cshell-dev 57    Line has trai
+                                                 s.ps1            ling whitespa
+                                                                  ce
+PSAvoidTrailingWhitespace           Information  cshell-dev 97    Line has trai
+                                                 s.ps1            ling whitespa
+                                                                  ce
+PSAvoidUsingWriteHost               Warning      cshell-dev 18    File 'cshell-
+                                                 s.ps1            devs.ps1' use
+                                                                  s Write-Host.
+                                                                   Avoid using
+                                                                  Write-Host be
+                                                                  cause it migh
+                                                                  t not work in
+                                                                   all hosts, d
+                                                                  oes not work
+                                                                  when there is
+                                                                   no host, and
+                                                                   (prior to PS
+                                                                   5.0) cannot
+                                                                  be suppressed
+                                                                  , captured, o
+                                                                  r redirected.
+                                                                   Instead, use
+                                                                   Write-Output
+                                                                  , Write-Verbo
+                                                                  se, or Write-
+                                                                  Information.
+PSAvoidUsingWriteHost               Warning      cshell-dev 21    File 'cshell-
+                                                 s.ps1            devs.ps1' use
+                                                                  s Write-Host.
+                                                                   Avoid using
+                                                                  Write-Host be
+                                                                  cause it migh
+                                                                  t not work in
+                                                                   all hosts, d
+                                                                  oes not work
+                                                                  when there is
+                                                                   no host, and
+                                                                   (prior to PS
+                                                                   5.0) cannot
+                                                                  be suppressed
+                                                                  , captured, o
+                                                                  r redirected.
+                                                                   Instead, use
+                                                                   Write-Output
+                                                                  , Write-Verbo
+                                                                  se, or Write-
+                                                                  Information.
+PSAvoidUsingWriteHost               Warning      cshell-dev 24    File 'cshell-
+                                                 s.ps1            devs.ps1' use
+                                                                  s Write-Host.
+                                                                   Avoid using
+                                                                  Write-Host be
+                                                                  cause it migh
+                                                                  t not work in
+                                                                   all hosts, d
+                                                                  oes not work
+                                                                  when there is
+                                                                   no host, and
+                                                                   (prior to PS
+                                                                   5.0) cannot
+                                                                  be suppressed
+                                                                  , captured, o
+                                                                  r redirected.
+                                                                   Instead, use
+                                                                   Write-Output
+                                                                  , Write-Verbo
+                                                                  se, or Write-
+                                                                  Information.
+PSAvoidUsingWriteHost               Warning      cshell-dev 42    File 'cshell-
+                                                 s.ps1            devs.ps1' use
+                                                                  s Write-Host.
+                                                                   Avoid using
+                                                                  Write-Host be
+                                                                  cause it migh
+                                                                  t not work in
+                                                                   all hosts, d
+                                                                  oes not work
+                                                                  when there is
+                                                                   no host, and
+                                                                   (prior to PS
+                                                                   5.0) cannot
+                                                                  be suppressed
+                                                                  , captured, o
+                                                                  r redirected.
+                                                                   Instead, use
+                                                                   Write-Output
+                                                                  , Write-Verbo
+                                                                  se, or Write-
+                                                                  Information.
+PSAvoidUsingWriteHost               Warning      cshell-dev 46    File 'cshell-
+                                                 s.ps1            devs.ps1' use
+                                                                  s Write-Host.
+                                                                   Avoid using
+                                                                  Write-Host be
+                                                                  cause it migh
+                                                                  t not work in
+                                                                   all hosts, d
+                                                                  oes not work
+                                                                  when there is
+                                                                   no host, and
+                                                                   (prior to PS
+                                                                   5.0) cannot
+                                                                  be suppressed
+                                                                  , captured, o
+                                                                  r redirected.
+                                                                   Instead, use
+                                                                   Write-Output
+                                                                  , Write-Verbo
+                                                                  se, or Write-
+                                                                  Information.
+PSAvoidUsingWriteHost               Warning      cshell-dev 49    File 'cshell-
+                                                 s.ps1            devs.ps1' use
+                                                                  s Write-Host.
+                                                                   Avoid using
+                                                                  Write-Host be
+                                                                  cause it migh
+                                                                  t not work in
+                                                                   all hosts, d
+                                                                  oes not work
+                                                                  when there is
+                                                                   no host, and
+                                                                   (prior to PS
+                                                                   5.0) cannot
+                                                                  be suppressed
+                                                                  , captured, o
+                                                                  r redirected.
+                                                                   Instead, use
+                                                                   Write-Output
+                                                                  , Write-Verbo
+                                                                  se, or Write-
+                                                                  Information.
+PSAvoidUsingWriteHost               Warning      cshell-dev 68    File 'cshell-
+                                                 s.ps1            devs.ps1' use
+                                                                  s Write-Host.
+                                                                   Avoid using
+                                                                  Write-Host be
+                                                                  cause it migh
+                                                                  t not work in
+                                                                   all hosts, d
+                                                                  oes not work
+                                                                  when there is
+                                                                   no host, and
+                                                                   (prior to PS
+                                                                   5.0) cannot
+                                                                  be suppressed
+                                                                  , captured, o
+                                                                  r redirected.
+                                                                   Instead, use
+                                                                   Write-Output
+                                                                  , Write-Verbo
+                                                                  se, or Write-
+                                                                  Information.
+PSAvoidUsingWriteHost               Warning      cshell-dev 78    File 'cshell-
+                                                 s.ps1            devs.ps1' use
+                                                                  s Write-Host.
+                                                                   Avoid using
+                                                                  Write-Host be
+                                                                  cause it migh
+                                                                  t not work in
+                                                                   all hosts, d
+                                                                  oes not work
+                                                                  when there is
+                                                                   no host, and
+                                                                   (prior to PS
+                                                                   5.0) cannot
+                                                                  be suppressed
+                                                                  , captured, o
+                                                                  r redirected.
+                                                                   Instead, use
+                                                                   Write-Output
+                                                                  , Write-Verbo
+                                                                  se, or Write-
+                                                                  Information.
+PSUseBOMForUnicodeEncodedFile       Warning      cshell-dev       Missing BOM e
+                                                 s.ps1            ncoding for n
+                                                                  on-ASCII enco
+                                                                  ded file 'csh
+                                                                  ell-devs.ps1'
+PSAvoidUsingCmdletAliases           Warning      cshell-dev 103   'echo' is an
+                                                 s.ps1            alias of 'Wri
+                                                                  te-Output'. A
+                                                                  lias can intr
+                                                                  oduce possibl
+                                                                  e problems an
+                                                                  d make script
+                                                                  s hard to mai
+                                                                  ntain. Please
+                                                                   consider cha
+                                                                  nging alias t
+                                                                  o its full co
+                                                                  ntent.
+PSAvoidUsingCmdletAliases           Warning      cshell-dev 104   'echo' is an
+                                                 s.ps1            alias of 'Wri
+                                                                  te-Output'. A
+                                                                  lias can intr
+                                                                  oduce possibl
+                                                                  e problems an
+                                                                  d make script
+                                                                  s hard to mai
+                                                                  ntain. Please
+                                                                   consider cha
+                                                                  nging alias t
+                                                                  o its full co
+                                                                  ntent.
+PSAvoidUsingCmdletAliases           Warning      cshell-dev 105   'echo' is an
+                                                 s.ps1            alias of 'Wri
+                                                                  te-Output'. A
+                                                                  lias can intr
+                                                                  oduce possibl
+                                                                  e problems an
+                                                                  d make script
+                                                                  s hard to mai
+                                                                  ntain. Please
+                                                                   consider cha
+                                                                  nging alias t
+                                                                  o its full co
+                                                                  ntent.
+PSAvoidUsingCmdletAliases           Warning      cshell-dev 6     'cls' is an a
+                                                 s.ps1            lias of 'Clea
+                                                                  r-Host'. Alia
+                                                                  s can introdu
+                                                                  ce possible p
+                                                                  roblems and m
+                                                                  ake scripts h
+                                                                  ard to mainta
+                                                                  in. Please co
+                                                                  nsider changi
+                                                                  ng alias to i
+                                                                  ts full conte
+                                                                  nt.
+PSAvoidUsingCmdletAliases           Warning      cshell-dev 7     'echo' is an
+                                                 s.ps1            alias of 'Wri
+                                                                  te-Output'. A
+                                                                  lias can intr
+                                                                  oduce possibl
+                                                                  e problems an
+                                                                  d make script
+                                                                  s hard to mai
+                                                                  ntain. Please
+                                                                   consider cha
+                                                                  nging alias t
+                                                                  o its full co
+                                                                  ntent.
+PSAvoidUsingCmdletAliases           Warning      cshell-dev 8     'echo' is an
+                                                 s.ps1            alias of 'Wri
+                                                                  te-Output'. A
+                                                                  lias can intr
+                                                                  oduce possibl
+                                                                  e problems an
+                                                                  d make script
+                                                                  s hard to mai
+                                                                  ntain. Please
+                                                                   consider cha
+                                                                  nging alias t
+                                                                  o its full co
+                                                                  ntent.
+PSAvoidUsingCmdletAliases           Warning      cshell-dev 9     'echo' is an
+                                                 s.ps1            alias of 'Wri
+                                                                  te-Output'. A
+                                                                  lias can intr
+                                                                  oduce possibl
+                                                                  e problems an
+                                                                  d make script
+                                                                  s hard to mai
+                                                                  ntain. Please
+                                                                   consider cha
+                                                                  nging alias t
+                                                                  o its full co
+                                                                  ntent.
+PSAvoidUsingCmdletAliases           Warning      cshell-dev 10    'echo' is an
+                                                 s.ps1            alias of 'Wri
+                                                                  te-Output'. A
+                                                                  lias can intr
+                                                                  oduce possibl
+                                                                  e problems an
+                                                                  d make script
+                                                                  s hard to mai
+                                                                  ntain. Please
+                                                                   consider cha
+                                                                  nging alias t
+                                                                  o its full co
+                                                                  ntent.
+PSAvoidUsingCmdletAliases           Warning      cshell-dev 11    'echo' is an
+                                                 s.ps1            alias of 'Wri
+                                                                  te-Output'. A
+                                                                  lias can intr
+                                                                  oduce possibl
+                                                                  e problems an
+                                                                  d make script
+                                                                  s hard to mai
+                                                                  ntain. Please
+                                                                   consider cha
+                                                                  nging alias t
+                                                                  o its full co
+                                                                  ntent.
+PSAvoidUsingCmdletAliases           Warning      cshell-dev 12    'echo' is an
+                                                 s.ps1            alias of 'Wri
+                                                                  te-Output'. A
+                                                                  lias can intr
+                                                                  oduce possibl
+                                                                  e problems an
+                                                                  d make script
+                                                                  s hard to mai
+                                                                  ntain. Please
+                                                                   consider cha
+                                                                  nging alias t
+                                                                  o its full co
+                                                                  ntent.
+PSAvoidUsingCmdletAliases           Warning      cshell-dev 13    'echo' is an
+                                                 s.ps1            alias of 'Wri
+                                                                  te-Output'. A
+                                                                  lias can intr
+                                                                  oduce possibl
+                                                                  e problems an
+                                                                  d make script
+                                                                  s hard to mai
+                                                                  ntain. Please
+                                                                   consider cha
+                                                                  nging alias t
+                                                                  o its full co
+                                                                  ntent.
+PSAvoidUsingCmdletAliases           Warning      cshell-dev 32    'echo' is an
+                                                 s.ps1            alias of 'Wri
+                                                                  te-Output'. A
+                                                                  lias can intr
+                                                                  oduce possibl
+                                                                  e problems an
+                                                                  d make script
+                                                                  s hard to mai
+                                                                  ntain. Please
+                                                                   consider cha
+                                                                  nging alias t
+                                                                  o its full co
+                                                                  ntent.
+PSAvoidUsingCmdletAliases           Warning      cshell-dev 33    'echo' is an
+                                                 s.ps1            alias of 'Wri
+                                                                  te-Output'. A
+                                                                  lias can intr
+                                                                  oduce possibl
+                                                                  e problems an
+                                                                  d make script
+                                                                  s hard to mai
+                                                                  ntain. Please
+                                                                   consider cha
+                                                                  nging alias t
+                                                                  o its full co
+                                                                  ntent.
+PSAvoidUsingCmdletAliases           Warning      cshell-dev 34    'echo' is an
+                                                 s.ps1            alias of 'Wri
+                                                                  te-Output'. A
+                                                                  lias can intr
+                                                                  oduce possibl
+                                                                  e problems an
+                                                                  d make script
+                                                                  s hard to mai
+                                                                  ntain. Please
+                                                                   consider cha
+                                                                  nging alias t
+                                                                  o its full co
+                                                                  ntent.
+PSAvoidUsingCmdletAliases           Warning      cshell-dev 36    'echo' is an
+                                                 s.ps1            alias of 'Wri
+                                                                  te-Output'. A
+                                                                  lias can intr
+                                                                  oduce possibl
+                                                                  e problems an
+                                                                  d make script
+                                                                  s hard to mai
+                                                                  ntain. Please
+                                                                   consider cha
+                                                                  nging alias t
+                                                                  o its full co
+                                                                  ntent.
+PSAvoidUsingCmdletAliases           Warning      cshell-dev 37    'echo' is an
+                                                 s.ps1            alias of 'Wri
+                                                                  te-Output'. A
+                                                                  lias can intr
+                                                                  oduce possibl
+                                                                  e problems an
+                                                                  d make script
+                                                                  s hard to mai
+                                                                  ntain. Please
+                                                                   consider cha
+                                                                  nging alias t
+                                                                  o its full co
+                                                                  ntent.
+PSAvoidUsingCmdletAliases           Warning      cshell-dev 38    'echo' is an
+                                                 s.ps1            alias of 'Wri
+                                                                  te-Output'. A
+                                                                  lias can intr
+                                                                  oduce possibl
+                                                                  e problems an
+                                                                  d make script
+                                                                  s hard to mai
+                                                                  ntain. Please
+                                                                   consider cha
+                                                                  nging alias t
+                                                                  o its full co
+                                                                  ntent.
+PSAvoidUsingCmdletAliases           Warning      cshell-dev 40    'echo' is an
+                                                 s.ps1            alias of 'Wri
+                                                                  te-Output'. A
+                                                                  lias can intr
+                                                                  oduce possibl
+                                                                  e problems an
+                                                                  d make script
+                                                                  s hard to mai
+                                                                  ntain. Please
+                                                                   consider cha
+                                                                  nging alias t
+                                                                  o its full co
+                                                                  ntent.
+PSAvoidUsingCmdletAliases           Warning      cshell-dev 51    'echo' is an
+                                                 s.ps1            alias of 'Wri
+                                                                  te-Output'. A
+                                                                  lias can intr
+                                                                  oduce possibl
+                                                                  e problems an
+                                                                  d make script
+                                                                  s hard to mai
+                                                                  ntain. Please
+                                                                   consider cha
+                                                                  nging alias t
+                                                                  o its full co
+                                                                  ntent.
+PSAvoidUsingCmdletAliases           Warning      cshell-dev 56    'echo' is an
+                                                 s.ps1            alias of 'Wri
+                                                                  te-Output'. A
+                                                                  lias can intr
+                                                                  oduce possibl
+                                                                  e problems an
+                                                                  d make script
+                                                                  s hard to mai
+                                                                  ntain. Please
+                                                                   consider cha
+                                                                  nging alias t
+                                                                  o its full co
+                                                                  ntent.
+PSAvoidUsingCmdletAliases           Warning      cshell-dev 60    'cd' is an al
+                                                 s.ps1            ias of 'Set-L
+                                                                  ocation'. Ali
+                                                                  as can introd
+                                                                  uce possible
+                                                                  problems and
+                                                                  make scripts
+                                                                  hard to maint
+                                                                  ain. Please c
+                                                                  onsider chang
+                                                                  ing alias to
+                                                                  its full cont
+                                                                  ent.
+PSAvoidUsingCmdletAliases           Warning      cshell-dev 64    'echo' is an
+                                                 s.ps1            alias of 'Wri
+                                                                  te-Output'. A
+                                                                  lias can intr
+                                                                  oduce possibl
+                                                                  e problems an
+                                                                  d make script
+                                                                  s hard to mai
+                                                                  ntain. Please
+                                                                   consider cha
+                                                                  nging alias t
+                                                                  o its full co
+                                                                  ntent.
+PSAvoidUsingCmdletAliases           Warning      cshell-dev 65    'echo' is an
+                                                 s.ps1            alias of 'Wri
+                                                                  te-Output'. A
+                                                                  lias can intr
+                                                                  oduce possibl
+                                                                  e problems an
+                                                                  d make script
+                                                                  s hard to mai
+                                                                  ntain. Please
+                                                                   consider cha
+                                                                  nging alias t
+                                                                  o its full co
+                                                                  ntent.
+PSAvoidUsingCmdletAliases           Warning      cshell-dev 71    '%' is an ali
+                                                 s.ps1            as of 'ForEac
+                                                                  h-Object'. Al
+                                                                  ias can intro
+                                                                  duce possible
+                                                                   problems and
+                                                                   make scripts
+                                                                   hard to main
+                                                                  tain. Please
+                                                                  consider chan
+                                                                  ging alias to
+                                                                   its full con
+                                                                  tent.
+PSAvoidUsingCmdletAliases           Warning      cshell-dev 80    'cls' is an a
+                                                 s.ps1            lias of 'Clea
+                                                                  r-Host'. Alia
+                                                                  s can introdu
+                                                                  ce possible p
+                                                                  roblems and m
+                                                                  ake scripts h
+                                                                  ard to mainta
+                                                                  in. Please co
+                                                                  nsider changi
+                                                                  ng alias to i
+                                                                  ts full conte
+                                                                  nt.
+PSAvoidUsingCmdletAliases           Warning      cshell-dev 85    'echo' is an
+                                                 s.ps1            alias of 'Wri
+                                                                  te-Output'. A
+                                                                  lias can intr
+                                                                  oduce possibl
+                                                                  e problems an
+                                                                  d make script
+                                                                  s hard to mai
+                                                                  ntain. Please
+                                                                   consider cha
+                                                                  nging alias t
+                                                                  o its full co
+                                                                  ntent.
+PSAvoidUsingCmdletAliases           Warning      cshell-dev 87    'echo' is an
+                                                 s.ps1            alias of 'Wri
+                                                                  te-Output'. A
+                                                                  lias can intr
+                                                                  oduce possibl
+                                                                  e problems an
+                                                                  d make script
+                                                                  s hard to mai
+                                                                  ntain. Please
+                                                                   consider cha
+                                                                  nging alias t
+                                                                  o its full co
+                                                                  ntent.
+PSAvoidUsingCmdletAliases           Warning      cshell-dev 98    'echo' is an
+                                                 s.ps1            alias of 'Wri
+                                                                  te-Output'. A
+                                                                  lias can intr
+                                                                  oduce possibl
+                                                                  e problems an
+                                                                  d make script
+                                                                  s hard to mai
+                                                                  ntain. Please
+                                                                   consider cha
+                                                                  nging alias t
+                                                                  o its full co
+                                                                  ntent.
+
+[0m
+[31m[powershell] cshell-servers.ps1 - ERROR - 1 error(s)[0m
+[31m--Error detail:
+
+[32;1mRuleName                            Severity     ScriptName Line  Message[0m
+[32;1m--------                            --------     ---------- ----  -------[0m
+PSAvoidGlobalVars                   Warning      cshell-ser 6     Found global
+                                                 vers.ps1         variable 'glo
+                                                                  bal:Id'.
+PSAvoidGlobalVars                   Warning      cshell-ser 8     Found global
+                                                 vers.ps1         variable 'glo
+                                                                  bal:Id'.
+PSAvoidGlobalVars                   Warning      cshell-ser 9     Found global
+                                                 vers.ps1         variable 'glo
+                                                                  bal:Id'.
+PSAvoidUsingWriteHost               Warning      cshell-ser 4     File 'cshell-
+                                                 vers.ps1         servers.ps1'
+                                                                  uses Write-Ho
+                                                                  st. Avoid usi
+                                                                  ng Write-Host
+                                                                   because it m
+                                                                  ight not work
+                                                                   in all hosts
+                                                                  , does not wo
+                                                                  rk when there
+                                                                   is no host,
+                                                                  and (prior to
+                                                                   PS 5.0) cann
+                                                                  ot be suppres
+                                                                  sed, captured
+                                                                  , or redirect
+                                                                  ed. Instead,
+                                                                  use Write-Out
+                                                                  put, Write-Ve
+                                                                  rbose, or Wri
+                                                                  te-Informatio
+                                                                  n.
+PSAvoidUsingCmdletAliases           Warning      cshell-ser 1     'echo' is an
+                                                 vers.ps1         alias of 'Wri
+                                                                  te-Output'. A
+                                                                  lias can intr
+                                                                  oduce possibl
+                                                                  e problems an
+                                                                  d make script
+                                                                  s hard to mai
+                                                                  ntain. Please
+                                                                   consider cha
+                                                                  nging alias t
+                                                                  o its full co
+                                                                  ntent.
+PSAvoidUsingCmdletAliases           Warning      cshell-ser 2     'echo' is an
+                                                 vers.ps1         alias of 'Wri
+                                                                  te-Output'. A
+                                                                  lias can intr
+                                                                  oduce possibl
+                                                                  e problems an
+                                                                  d make script
+                                                                  s hard to mai
+                                                                  ntain. Please
+                                                                   consider cha
+                                                                  nging alias t
+                                                                  o its full co
+                                                                  ntent.
+PSAvoidUsingCmdletAliases           Warning      cshell-ser 6     'echo' is an
+                                                 vers.ps1         alias of 'Wri
+                                                                  te-Output'. A
+                                                                  lias can intr
+                                                                  oduce possibl
+                                                                  e problems an
+                                                                  d make script
+                                                                  s hard to mai
+                                                                  ntain. Please
+                                                                   consider cha
+                                                                  nging alias t
+                                                                  o its full co
+                                                                  ntent.
+PSAvoidUsingCmdletAliases           Warning      cshell-ser 8     'echo' is an
+                                                 vers.ps1         alias of 'Wri
+                                                                  te-Output'. A
+                                                                  lias can intr
+                                                                  oduce possibl
+                                                                  e problems an
+                                                                  d make script
+                                                                  s hard to mai
+                                                                  ntain. Please
+                                                                   consider cha
+                                                                  nging alias t
+                                                                  o its full co
+                                                                  ntent.
+PSAvoidUsingCmdletAliases           Warning      cshell-ser 9     'echo' is an
+                                                 vers.ps1         alias of 'Wri
+                                                                  te-Output'. A
+                                                                  lias can intr
+                                                                  oduce possibl
+                                                                  e problems an
+                                                                  d make script
+                                                                  s hard to mai
+                                                                  ntain. Please
+                                                                   consider cha
+                                                                  nging alias t
+                                                                  o its full co
+                                                                  ntent.
+
+[0m
+[31m❌ Linted [POWERSHELL] files with [powershell]: Found 2 error(s) - (8.65s)[0m
+[Text Reporter] Generated TEXT report: /github/workspace/report/linters_logs/ERROR-POWERSHELL_POWERSHELL.log
+
++----SUMMARY-----+--------------------------+---------------+-------+-------+--------+--------------+
+| Descriptor     | Linter                   | Mode          | Files | Fixed | Errors | Elapsed time |
++----------------+--------------------------+---------------+-------+-------+--------+--------------+
+| ✅ ACTION      | actionlint               | list_of_files |     2 |       |      0 |        0.02s |
+| ✅ CREDENTIALS | secretlint               | project       |   n/a |       |      0 |        1.08s |
+| ✅ GIT         | git_diff                 | project       |   n/a |       |      0 |        0.01s |
+| ◬ MARKDOWN     | markdownlint             | list_of_files |     5 |       |      5 |         0.4s |
+| ❌ MARKDOWN    | markdown-link-check      | file          |     5 |       |      2 |         2.0s |
+| ✅ MARKDOWN    | markdown-table-formatter | list_of_files |     5 |       |      0 |        0.31s |
+| ❌ POWERSHELL  | powershell               | file          |     2 |       |      2 |        8.65s |
+| ◬ YAML         | prettier                 | list_of_files |     2 |       |      1 |        1.23s |
+| ✅ YAML        | v8r                      | file          |     2 |       |      0 |        1.97s |
+| ❌ YAML        | yamllint                 | list_of_files |     2 |       |      1 |        0.16s |
++----------------+--------------------------+---------------+-------+-------+--------+--------------+
+
+[34mYou could have same capabilities but better runtime performances if you use a MegaLinter flavor:[0m
+- [dotnet] megalinter/megalinter/flavors/dotnet@v5 (47 linters) https://megalinter.github.io/flavors/dotnet/
+
+[GitHub Comment Reporter] No pull request was found, so no comment has been posted
