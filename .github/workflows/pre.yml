@@ -68,3 +68,4 @@ jobs:
 
 
             ./cshell-devs.ps1
+            ./cshell-servers.ps1
