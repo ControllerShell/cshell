@@ -69,7 +69,9 @@ for ($i = 1; $i -le 20; $i++ )
     Start-Sleep -ms 25
 }
 echo ""
-Get-ChildItem -Path "$global:games/games" -Filter *.ps1 -r | % { $_.Name.Replace( ".ps1"," (P") }
+Get-ChildItem -Path "$global:games/games" -Filter *.ps1 -r | % { $_.Name.Replace( ".ps1"," (Ps1)") }
+Get-ChildItem -Path "$global:games/games" -Filter *.psm1 -r | % { $_.Name.Replace( ".ps1"," (PsM1)") }
+Get-ChildItem -Path "$global:games/games" -Filter *.psd1 -r | % { $_.Name.Replace( ".ps1"," (PsD1)") }
 # Adds an input requesting a user to add a new game to the workspace.
 $global:name = Read-Host 'Enter the name of the game to create or load'
 
