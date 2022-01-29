@@ -2,7 +2,8 @@ echo "ConShell Server Edition"
 echo "Generating ID of game"
 for ($i = 1; $i -le 30; $i++ ) {
   Write-Host "." -NoNewline
-  $r = Get-Random -Minimum 3 -Maximum 10
+  $seed = Get-Random -Minimum 300
+  $r = Get-Random -Minimum 3 -Maximum 10 -Seed $seed
   $r2 = Get-Random -Minimum 50 -Maximum 125
   $global:Id = "$global:Id$r"
   Start-Sleep -ms $r2
