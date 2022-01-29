@@ -41,7 +41,7 @@ jobs:
         run: |
           Install-Module PsScriptAnalyzer -Force
           Invoke-ScriptAnalyzer -Path ./
-            - name: MegaLinter
+      - name: MegaLinter
 
         id: ml
 
