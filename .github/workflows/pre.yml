@@ -31,10 +31,29 @@ jobs:
           
           ./builder/PsBuilder.init.ps1
         shell: pwsh
+  analyze:
+    name: "Analyze with PsScriptAnalyzer and lint with Pester/PsBuilder"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Analyze
+        shell: pwsh
+        run: |
+          Install-Module PsScriptAnalyzer -Force
+          Invoke-ScriptAnalyzer -Path ./
+      - name: Lint
+
+        shell: pwsh
+        run: |
+          Install-Module Pester -Force
+          Invoke-Pester -Path ./
+          
+
+
   pre-release:
 
     name: "Pre-release version"
-    needs: build
+    needs: [build, analyze]
     runs-on: "ubuntu-latest"
 
     steps:
