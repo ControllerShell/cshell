@@ -608,37 +608,18 @@ See documentation on https://megalinter.github.io/descriptors/powershell_powersh
     
     RuleName                            Severity     ScriptName Line  Message
     --------                            --------     ---------- ----  -------
-    PSAvoidGlobalVars                   Warning      cshell-ser 6     Found global
+    PSAvoidGlobalVars                   Warning      cshell-ser 7     Found global
                                                      vers.ps1         variable 'glo
                                                                       bal:Id'.
-    PSAvoidGlobalVars                   Warning      cshell-ser 8     Found global
+    PSAvoidGlobalVars                   Warning      cshell-ser 7     Found global
                                                      vers.ps1         variable 'glo
                                                                       bal:Id'.
-    PSAvoidGlobalVars                   Warning      cshell-ser 9     Found global
+    PSAvoidGlobalVars                   Warning      cshell-ser 10    Found global
                                                      vers.ps1         variable 'glo
                                                                       bal:Id'.
-    PSAvoidUsingWriteHost               Warning      cshell-ser 4     File 'cshell-
-                                                     vers.ps1         servers.ps1'
-                                                                      uses Write-Ho
-                                                                      st. Avoid usi
-                                                                      ng Write-Host
-                                                                       because it m
-                                                                      ight not work
-                                                                       in all hosts
-                                                                      , does not wo
-                                                                      rk when there
-                                                                       is no host,
-                                                                      and (prior to
-                                                                       PS 5.0) cann
-                                                                      ot be suppres
-                                                                      sed, captured
-                                                                      , or redirect
-                                                                      ed. Instead,
-                                                                      use Write-Out
-                                                                      put, Write-Ve
-                                                                      rbose, or Wri
-                                                                      te-Informatio
-                                                                      n.
+    PSAvoidGlobalVars                   Warning      cshell-ser 11    Found global
+                                                     vers.ps1         variable 'glo
+                                                                      bal:Id'.
     PSAvoidUsingCmdletAliases           Warning      cshell-ser 1     'echo' is an
                                                      vers.ps1         alias of 'Wri
                                                                       te-Output'. A
@@ -665,7 +646,7 @@ See documentation on https://megalinter.github.io/descriptors/powershell_powersh
                                                                       nging alias t
                                                                       o its full co
                                                                       ntent.
-    PSAvoidUsingCmdletAliases           Warning      cshell-ser 6     'echo' is an
+    PSAvoidUsingCmdletAliases           Warning      cshell-ser 10    'echo' is an
                                                      vers.ps1         alias of 'Wri
                                                                       te-Output'. A
                                                                       lias can intr
@@ -678,7 +659,7 @@ See documentation on https://megalinter.github.io/descriptors/powershell_powersh
                                                                       nging alias t
                                                                       o its full co
                                                                       ntent.
-    PSAvoidUsingCmdletAliases           Warning      cshell-ser 8     'echo' is an
+    PSAvoidUsingCmdletAliases           Warning      cshell-ser 11    'echo' is an
                                                      vers.ps1         alias of 'Wri
                                                                       te-Output'. A
                                                                       lias can intr
@@ -691,17 +672,26 @@ See documentation on https://megalinter.github.io/descriptors/powershell_powersh
                                                                       nging alias t
                                                                       o its full co
                                                                       ntent.
-    PSAvoidUsingCmdletAliases           Warning      cshell-ser 9     'echo' is an
-                                                     vers.ps1         alias of 'Wri
-                                                                      te-Output'. A
-                                                                      lias can intr
-                                                                      oduce possibl
-                                                                      e problems an
-                                                                      d make script
-                                                                      s hard to mai
-                                                                      ntain. Please
-                                                                       consider cha
-                                                                      nging alias t
-                                                                      o its full co
-                                                                      ntent.
+    PSAvoidUsingWriteHost               Warning      cshell-ser 4     File 'cshell-
+                                                     vers.ps1         servers.ps1'
+                                                                      uses Write-Ho
+                                                                      st. Avoid usi
+                                                                      ng Write-Host
+                                                                       because it m
+                                                                      ight not work
+                                                                       in all hosts
+                                                                      , does not wo
+                                                                      rk when there
+                                                                       is no host,
+                                                                      and (prior to
+                                                                       PS 5.0) cann
+                                                                      ot be suppres
+                                                                      sed, captured
+                                                                      , or redirect
+                                                                      ed. Instead,
+                                                                      use Write-Out
+                                                                      put, Write-Ve
+                                                                      rbose, or Wri
+                                                                      te-Informatio
+                                                                      n.
 
