@@ -39,3 +39,8 @@ So, type `r` and press Enter, or extract the ZIP, cd the newly extacted folder's
 Read the license. If you agree to it, press Enter.
 
 Follow the on-screen instructions then you are ready to go! :)
+## Comparison
+### Developer (Non-Server)
+Allows you to work freely with the requirement of a workspace.
+### Server
+Build randomly generated PS games with a Game ID and no workspace. Recommended for CI.
