@@ -1,0 +1,28 @@
+Results of markdown-link-check linter (version 3.9.2)
+See documentation on https://megalinter.github.io/descriptors/markdown_markdown_link_check/
+-----------------------------------------------
+
+✅ [SUCCESS] README.md
+✅ [SUCCESS] wiki/Contributing to the wiki.md
+❌ [ERROR] wiki/Home.md
+    
+    FILE: wiki/Home.md
+      [✖] workspace
+    
+      1 links checked.
+    
+      ERROR: 1 dead links found!
+      [✖] workspace → Status: 400
+
+✅ [SUCCESS] wiki/Workspace.md
+❌ [ERROR] wiki/_Footer.md
+    
+    FILE: wiki/_Footer.md
+      [✖] contributing-to-the-wiki
+      [✓] https://gnu.org/licenses/fdl-1.3.html
+    
+      2 links checked.
+    
+      ERROR: 1 dead links found!
+      [✖] contributing-to-the-wiki → Status: 400
+

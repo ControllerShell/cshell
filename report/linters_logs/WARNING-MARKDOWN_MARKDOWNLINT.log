@@ -1,0 +1,12 @@
+Results of markdownlint linter (version 0.30.0)
+See documentation on https://megalinter.github.io/descriptors/markdown_markdownlint/
+-----------------------------------------------
+
+❌ [ERROR] for workspace /github/workspace
+Linter raw log:
+/github/workspace/wiki/_Footer.md:1 MD041/first-line-heading/first-line-h1 First line in a file should be a top-level heading [Context: "[Contribute](contributing-to-t..."]
+/github/workspace/wiki/Contributing to the wiki.md:1:63 MD034/no-bare-urls Bare URL used [Context: "https://github.com/ControllerS..."]
+/github/workspace/wiki/Contributing to the wiki.md:1 MD041/first-line-heading/first-line-h1 First line in a file should be a top-level heading [Context: "It is possible to contribute t..."]
+/github/workspace/wiki/Home.md:1 MD041/first-line-heading/first-line-h1 First line in a file should be a top-level heading [Context: "## cshell(1) Manual Page"]
+/github/workspace/wiki/Workspace.md:1 MD041/first-line-heading/first-line-h1 First line in a file should be a top-level heading [Context: "<sup>Sometimes the wiki may be..."]
+

@@ -1,0 +1,11 @@
+Results of prettier linter (version 2.5.1)
+See documentation on https://megalinter.github.io/descriptors/yaml_prettier/
+-----------------------------------------------
+
+❌ [ERROR] for workspace /github/workspace
+Linter raw log:
+Checking formatting...
+[warn] .github/workflows/pre.yml
+[warn] .github/workflows/wiki.yml
+[warn] Code style issues found in the above file(s). Forgot to run Prettier?
+
