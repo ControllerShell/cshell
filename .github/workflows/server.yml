@@ -7,4 +7,4 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - shell: pwsh
-        run: ./cshell-server.ps1
+        run: ./cshell-servers.ps1
