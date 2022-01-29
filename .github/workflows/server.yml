@@ -1,7 +1,8 @@
 on: [push, pull_request]
 
 jobs:
-  server.yml:
+  serveryml:
+    name: server.yml
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
