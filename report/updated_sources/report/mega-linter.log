@@ -10,7 +10,7 @@ The MegaLinter documentation can be found at:
 ----------------------------------------------------------------------------------------------------
 GITHUB_REPOSITORY: ControllerShell/cshell
 GITHUB_REF: refs/heads/main
-GITHUB_RUN_ID: 1766433205
+GITHUB_RUN_ID: 1766869818
 
 
 [Activation] EDITORCONFIG_EDITORCONFIG_CHECKER has been set inactive, as none of these files has been found: ['.editorconfig']
@@ -25,7 +25,7 @@ Listing all files in directory [/github/workspace], then filter with:
 - File extensions: , .R, .RMD, .Rmd, .bash, .c, .c++, .cc, .cdxml, .clj, .cljc, .cljs, .coffee, .cpp, .cs, .css, .cu, .cuh, .cxx, .dart, .dash, .edn, .env, .feature, .go, .gradle, .graphql, .groovy, .gvy, .h, .h++, .hcl, .hh, .hpp, .htm, .html, .hxx, .java, .js, .json, .json5, .jsonc, .ksh, .kt, .kts, .lua, .md, .nf, .p6, .php, .pl, .pl6, .pm, .pm6, .pp, .proto, .ps1, .ps1xml, .psd1, .psm1, .psrc, .pssc, .py, .r, .raku, .rakumod, .rakutest, .rb, .rs, .rst, .saas, .scala, .scss, .sh, .smk, .sql, .t, .tex, .tf, .ts, .vb, .xml, .yaml, .yml
 - File names (regex): Dockerfile, Jenkinsfile, Snakefile
 - Excluding .gitignored files [0]: 
-Kept [11] files on [12] found files
+Kept [11] files on [13] found files
 
 +----MATCHING LINTERS--------------------+---------------------------------------------+----------------+------------+
 | Descriptor  | Linter                   | Criteria                                    | Matching files | Format/Fix |
@@ -70,20 +70,22 @@ Kept [11] files on [12] found files
 [markdownlint] wiki/Workspace.md
 [markdownlint] wiki/_Footer.md
 --Error detail:
+/github/workspace/README.md:2:401 MD013/line-length Line length [Expected: 400; Actual: 2804]
+/github/workspace/README.md:31:56 MD034/no-bare-urls Bare URL used [Context: "https://chocolatey.org/install"]
 /github/workspace/wiki/_Footer.md:1 MD041/first-line-heading/first-line-h1 First line in a file should be a top-level heading [Context: "[Contribute](contributing-to-t..."]
 /github/workspace/wiki/Contributing to the wiki.md:1:63 MD034/no-bare-urls Bare URL used [Context: "https://github.com/ControllerS..."]
 /github/workspace/wiki/Contributing to the wiki.md:1 MD041/first-line-heading/first-line-h1 First line in a file should be a top-level heading [Context: "It is possible to contribute t..."]
 /github/workspace/wiki/Home.md:1 MD041/first-line-heading/first-line-h1 First line in a file should be a top-level heading [Context: "## cshell(1) Manual Page"]
 /github/workspace/wiki/Workspace.md:1 MD041/first-line-heading/first-line-h1 First line in a file should be a top-level heading [Context: "<sup>Sometimes the wiki may be..."]
 
-[33m✅ Linted [MARKDOWN] files with [markdownlint]: Found 5 non blocking error(s) - (0.36s)[0m
+[33m✅ Linted [MARKDOWN] files with [markdownlint]: Found 7 non blocking error(s) - (0.39s)[0m
+[Text Reporter] Generated TEXT report: /github/workspace/report/linters_logs/WARNING-MARKDOWN_MARKDOWNLINT.log
 
 [1m### Processed [CREDENTIALS] files[0m
 - Using [secretlint v4.1.0] https://megalinter.github.io/v5/descriptors/credentials_secretlint
 - MegaLinter key: [CREDENTIALS_SECRETLINT]
 - Rules config: [.secretlintrc.json]
-[32m✅ Linted [CREDENTIALS] files with [secretlint] successfully - (1.03s)[0m
-[Text Reporter] Generated TEXT report: /github/workspace/report/linters_logs/WARNING-MARKDOWN_MARKDOWNLINT.log
+[32m✅ Linted [CREDENTIALS] files with [secretlint] successfully - (1.08s)[0m
 [Text Reporter] Generated TEXT report: /github/workspace/report/linters_logs/SUCCESS-CREDENTIALS_SECRETLINT.log
 
 [1m### Processed [MARKDOWN] files[0m
@@ -95,7 +97,7 @@ Kept [11] files on [12] found files
 [markdown-table-formatter] wiki/Home.md
 [markdown-table-formatter] wiki/Workspace.md
 [markdown-table-formatter] wiki/_Footer.md
-[32m✅ Linted [MARKDOWN] files with [markdown-table-formatter] successfully - (0.28s)[0m
+[32m✅ Linted [MARKDOWN] files with [markdown-table-formatter] successfully - (0.29s)[0m
 [Text Reporter] Generated TEXT report: /github/workspace/report/linters_logs/SUCCESS-MARKDOWN_MARKDOWN_TABLE_FORMATTER.log
 
 [1m### Processed [MARKDOWN] files[0m
@@ -128,7 +130,7 @@ FILE: /github/workspace/wiki/_Footer.md
   ERROR: 1 dead links found!
   [✖] contributing-to-the-wiki → Status: 400
 [0m
-[31m❌ Linted [MARKDOWN] files with [markdown-link-check]: Found 2 error(s) - (1.76s)[0m
+[31m❌ Linted [MARKDOWN] files with [markdown-link-check]: Found 2 error(s) - (2.23s)[0m
 [Text Reporter] Generated TEXT report: /github/workspace/report/linters_logs/ERROR-MARKDOWN_MARKDOWN_LINK_CHECK.log
 
 [1m### Processed [YAML] files[0m
@@ -144,7 +146,46 @@ Checking formatting...
 [warn] .github/workflows/wiki.yml
 [warn] Code style issues found in the above file(s). Forgot to run Prettier?
 
-[33m✅ Linted [YAML] files with [prettier]: Found 1 non blocking error(s) - (1.11s)[0m
+[33m✅ Linted [YAML] files with [prettier]: Found 1 non blocking error(s) - (1.16s)[0m
+[Text Reporter] Generated TEXT report: /github/workspace/report/linters_logs/WARNING-YAML_PRETTIER.log
+
+[1m### Processed [YAML] files[0m
+- Using [yamllint v1.26.3] https://megalinter.github.io/v5/descriptors/yaml_yamllint
+- MegaLinter key: [YAML_YAMLLINT]
+- Rules config: [.yamllint.yml]
+[yamllint] .github/workflows/pre.yml
+[yamllint] .github/workflows/server.yml
+[yamllint] .github/workflows/wiki.yml
+--Error detail:
+::warning file=/github/workspace/.github/workflows/pre.yml,line=1,col=1::[document-start] missing document start "---"
+::warning file=/github/workspace/.github/workflows/pre.yml,line=3,col=1::[truthy] truthy value should be one of [false, true]
+::error file=/github/workspace/.github/workflows/pre.yml,line=27,col=1::[trailing-spaces] trailing spaces
+::error file=/github/workspace/.github/workflows/pre.yml,line=28,col=1::[trailing-spaces] trailing spaces
+::error file=/github/workspace/.github/workflows/pre.yml,line=31,col=1::[trailing-spaces] trailing spaces
+::warning file=/github/workspace/.github/workflows/pre.yml,line=60,col=104::[comments] too few spaces before comment
+::warning file=/github/workspace/.github/workflows/pre.yml,line=66,col=36::[comments] too few spaces before comment
+::error file=/github/workspace/.github/workflows/pre.yml,line=136,col=1::[trailing-spaces] trailing spaces
+::error file=/github/workspace/.github/workflows/pre.yml,line=137,col=1::[trailing-spaces] trailing spaces
+::warning file=/github/workspace/.github/workflows/server.yml,line=1,col=1::[document-start] missing document start "---"
+::warning file=/github/workspace/.github/workflows/server.yml,line=1,col=1::[truthy] truthy value should be one of [false, true]
+::warning file=/github/workspace/.github/workflows/wiki.yml,line=1,col=1::[document-start] missing document start "---"
+::warning file=/github/workspace/.github/workflows/wiki.yml,line=1,col=1::[truthy] truthy value should be one of [false, true]
+::error file=/github/workspace/.github/workflows/wiki.yml,line=9,col=1::[trailing-spaces] trailing spaces
+::error file=/github/workspace/.github/workflows/wiki.yml,line=10,col=1::[trailing-spaces] trailing spaces
+::error file=/github/workspace/.github/workflows/wiki.yml,line=22,col=11::[indentation] wrong indentation: expected 12 but found 10
+
+[31m❌ Linted [YAML] files with [yamllint]: Found 1 error(s) - (0.16s)[0m
+[Text Reporter] Generated TEXT report: /github/workspace/report/linters_logs/ERROR-YAML_YAMLLINT.log
+
+[1m### Processed [YAML] files[0m
+- Using [v8r v0.6.1] https://megalinter.github.io/v5/descriptors/yaml_v8r
+- MegaLinter key: [YAML_V8R]
+- Rules config: identified by [v8r]
+[v8r] .github/workflows/pre.yml - SUCCESS - 0 error(s)
+[v8r] .github/workflows/server.yml - SUCCESS - 0 error(s)
+[v8r] .github/workflows/wiki.yml - SUCCESS - 0 error(s)
+[32m✅ Linted [YAML] files with [v8r] successfully - (2.45s)[0m
+[Text Reporter] Generated TEXT report: /github/workspace/report/linters_logs/SUCCESS-YAML_V8R.log
 
 [1m### Processed [POWERSHELL] files[0m
 - Using [powershell v7.2.1] https://megalinter.github.io/v5/descriptors/powershell_powershell
@@ -170,40 +211,49 @@ PSAvoidGlobalVars                   Warning      cshell-dev 59    Found global
 PSAvoidGlobalVars                   Warning      cshell-dev 65    Found global
                                                  s.ps1            variable 'glo
                                                                   bal:games'.
-PSAvoidGlobalVars                   Warning      cshell-dev 71    Found global
+PSAvoidGlobalVars                   Warning      cshell-dev 72    Found global
                                                  s.ps1            variable 'glo
                                                                   bal:games'.
 PSAvoidGlobalVars                   Warning      cshell-dev 73    Found global
                                                  s.ps1            variable 'glo
-                                                                  bal:name'.
-PSAvoidGlobalVars                   Warning      cshell-dev 75    Found global
+                                                                  bal:games'.
+PSAvoidGlobalVars                   Warning      cshell-dev 74    Found global
                                                  s.ps1            variable 'glo
                                                                   bal:games'.
-PSAvoidGlobalVars                   Warning      cshell-dev 75    Found global
+PSAvoidGlobalVars                   Warning      cshell-dev 76    Found global
                                                  s.ps1            variable 'glo
                                                                   bal:name'.
-PSAvoidGlobalVars                   Warning      cshell-dev 77    Found global
-                                                 s.ps1            variable 'glo
-                                                                  bal:name'.
-PSAvoidGlobalVars                   Warning      cshell-dev 77    Found global
-                                                 s.ps1            variable 'glo
-                                                                  bal:name'.
-PSAvoidGlobalVars                   Warning      cshell-dev 77    Found global
-                                                 s.ps1            variable 'glo
-                                                                  bal:name'.
-PSAvoidGlobalVars                   Warning      cshell-dev 87    Found global
-                                                 s.ps1            variable 'glo
-                                                                  bal:name'.
-PSAvoidGlobalVars                   Warning      cshell-dev 87    Found global
+PSAvoidGlobalVars                   Warning      cshell-dev 78    Found global
                                                  s.ps1            variable 'glo
                                                                   bal:games'.
-PSAvoidGlobalVars                   Warning      cshell-dev 93    Found global
+PSAvoidGlobalVars                   Warning      cshell-dev 78    Found global
                                                  s.ps1            variable 'glo
                                                                   bal:name'.
-PSAvoidGlobalVars                   Warning      cshell-dev 96    Found global
+PSAvoidGlobalVars                   Warning      cshell-dev 80    Found global
                                                  s.ps1            variable 'glo
                                                                   bal:name'.
-PSAvoidGlobalVars                   Warning      cshell-dev 99    Found global
+PSAvoidGlobalVars                   Warning      cshell-dev 80    Found global
+                                                 s.ps1            variable 'glo
+                                                                  bal:name'.
+PSAvoidGlobalVars                   Warning      cshell-dev 80    Found global
+                                                 s.ps1            variable 'glo
+                                                                  bal:name'.
+PSAvoidGlobalVars                   Warning      cshell-dev 90    Found global
+                                                 s.ps1            variable 'glo
+                                                                  bal:name'.
+PSAvoidGlobalVars                   Warning      cshell-dev 90    Found global
+                                                 s.ps1            variable 'glo
+                                                                  bal:games'.
+PSAvoidGlobalVars                   Warning      cshell-dev 91    Found global
+                                                 s.ps1            variable 'glo
+                                                                  bal:games'.
+PSAvoidGlobalVars                   Warning      cshell-dev 91    Found global
+                                                 s.ps1            variable 'glo
+                                                                  bal:name'.
+PSAvoidGlobalVars                   Warning      cshell-dev 92    Found global
+                                                 s.ps1            variable 'glo
+                                                                  bal:name'.
+PSAvoidGlobalVars                   Warning      cshell-dev 97    Found global
                                                  s.ps1            variable 'glo
                                                                   bal:name'.
 PSAvoidTrailingWhitespace           Information  cshell-dev 2     Line has trai
@@ -212,7 +262,7 @@ PSAvoidTrailingWhitespace           Information  cshell-dev 2     Line has trai
 PSAvoidTrailingWhitespace           Information  cshell-dev 57    Line has trai
                                                  s.ps1            ling whitespa
                                                                   ce
-PSAvoidTrailingWhitespace           Information  cshell-dev 97    Line has trai
+PSAvoidTrailingWhitespace           Information  cshell-dev 95    Line has trai
                                                  s.ps1            ling whitespa
                                                                   ce
 PSAvoidUsingWriteHost               Warning      cshell-dev 18    File 'cshell-
@@ -362,7 +412,7 @@ PSAvoidUsingWriteHost               Warning      cshell-dev 68    File 'cshell-
                                                                   , Write-Verbo
                                                                   se, or Write-
                                                                   Information.
-PSAvoidUsingWriteHost               Warning      cshell-dev 78    File 'cshell-
+PSAvoidUsingWriteHost               Warning      cshell-dev 81    File 'cshell-
                                                  s.ps1            devs.ps1' use
                                                                   s Write-Host.
                                                                    Avoid using
@@ -388,33 +438,33 @@ PSUseBOMForUnicodeEncodedFile       Warning      cshell-dev       Missing BOM e
                                                                   on-ASCII enco
                                                                   ded file 'csh
                                                                   ell-devs.ps1'
+PSAvoidUsingCmdletAliases           Warning      cshell-dev 101   'echo' is an
+                                                 s.ps1            alias of 'Wri
+                                                                  te-Output'. A
+                                                                  lias can intr
+                                                                  oduce possibl
+                                                                  e problems an
+                                                                  d make script
+                                                                  s hard to mai
+                                                                  ntain. Please
+                                                                   consider cha
+                                                                  nging alias t
+                                                                  o its full co
+                                                                  ntent.
+PSAvoidUsingCmdletAliases           Warning      cshell-dev 102   'echo' is an
+                                                 s.ps1            alias of 'Wri
+                                                                  te-Output'. A
+                                                                  lias can intr
+                                                                  oduce possibl
+                                                                  e problems an
+                                                                  d make script
+                                                                  s hard to mai
+                                                                  ntain. Please
+                                                                   consider cha
+                                                                  nging alias t
+                                                                  o its full co
+                                                                  ntent.
 PSAvoidUsingCmdletAliases           Warning      cshell-dev 103   'echo' is an
-                                                 s.ps1            alias of 'Wri
-                                                                  te-Output'. A
-                                                                  lias can intr
-                                                                  oduce possibl
-                                                                  e problems an
-                                                                  d make script
-                                                                  s hard to mai
-                                                                  ntain. Please
-                                                                   consider cha
-                                                                  nging alias t
-                                                                  o its full co
-                                                                  ntent.
-PSAvoidUsingCmdletAliases           Warning      cshell-dev 104   'echo' is an
-                                                 s.ps1            alias of 'Wri
-                                                                  te-Output'. A
-                                                                  lias can intr
-                                                                  oduce possibl
-                                                                  e problems an
-                                                                  d make script
-                                                                  s hard to mai
-                                                                  ntain. Please
-                                                                   consider cha
-                                                                  nging alias t
-                                                                  o its full co
-                                                                  ntent.
-PSAvoidUsingCmdletAliases           Warning      cshell-dev 105   'echo' is an
                                                  s.ps1            alias of 'Wri
                                                                   te-Output'. A
                                                                   lias can intr
@@ -687,7 +737,20 @@ PSAvoidUsingCmdletAliases           Warning      cshell-dev 65    'echo' is an
                                                                   nging alias t
                                                                   o its full co
                                                                   ntent.
-PSAvoidUsingCmdletAliases           Warning      cshell-dev 71    '%' is an ali
+PSAvoidUsingCmdletAliases           Warning      cshell-dev 71    'echo' is an
+                                                 s.ps1            alias of 'Wri
+                                                                  te-Output'. A
+                                                                  lias can intr
+                                                                  oduce possibl
+                                                                  e problems an
+                                                                  d make script
+                                                                  s hard to mai
+                                                                  ntain. Please
+                                                                   consider cha
+                                                                  nging alias t
+                                                                  o its full co
+                                                                  ntent.
+PSAvoidUsingCmdletAliases           Warning      cshell-dev 72    '%' is an ali
                                                  s.ps1            as of 'ForEac
                                                                   h-Object'. Al
                                                                   ias can intro
@@ -700,7 +763,33 @@ PSAvoidUsingCmdletAliases           Warning      cshell-dev 71    '%' is an ali
                                                                   ging alias to
                                                                    its full con
                                                                   tent.
-PSAvoidUsingCmdletAliases           Warning      cshell-dev 80    'cls' is an a
+PSAvoidUsingCmdletAliases           Warning      cshell-dev 73    '%' is an ali
+                                                 s.ps1            as of 'ForEac
+                                                                  h-Object'. Al
+                                                                  ias can intro
+                                                                  duce possible
+                                                                   problems and
+                                                                   make scripts
+                                                                   hard to main
+                                                                  tain. Please
+                                                                  consider chan
+                                                                  ging alias to
+                                                                   its full con
+                                                                  tent.
+PSAvoidUsingCmdletAliases           Warning      cshell-dev 74    '%' is an ali
+                                                 s.ps1            as of 'ForEac
+                                                                  h-Object'. Al
+                                                                  ias can intro
+                                                                  duce possible
+                                                                   problems and
+                                                                   make scripts
+                                                                   hard to main
+                                                                  tain. Please
+                                                                  consider chan
+                                                                  ging alias to
+                                                                   its full con
+                                                                  tent.
+PSAvoidUsingCmdletAliases           Warning      cshell-dev 83    'cls' is an a
                                                  s.ps1            lias of 'Clea
                                                                   r-Host'. Alia
                                                                   s can introdu
@@ -713,7 +802,7 @@ PSAvoidUsingCmdletAliases           Warning      cshell-dev 80    'cls' is an a
                                                                   ng alias to i
                                                                   ts full conte
                                                                   nt.
-PSAvoidUsingCmdletAliases           Warning      cshell-dev 85    'echo' is an
+PSAvoidUsingCmdletAliases           Warning      cshell-dev 88    'echo' is an
                                                  s.ps1            alias of 'Wri
                                                                   te-Output'. A
                                                                   lias can intr
@@ -726,7 +815,7 @@ PSAvoidUsingCmdletAliases           Warning      cshell-dev 85    'echo' is an
                                                                   nging alias t
                                                                   o its full co
                                                                   ntent.
-PSAvoidUsingCmdletAliases           Warning      cshell-dev 87    'echo' is an
+PSAvoidUsingCmdletAliases           Warning      cshell-dev 90    'echo' is an
                                                  s.ps1            alias of 'Wri
                                                                   te-Output'. A
                                                                   lias can intr
@@ -739,7 +828,20 @@ PSAvoidUsingCmdletAliases           Warning      cshell-dev 87    'echo' is an
                                                                   nging alias t
                                                                   o its full co
                                                                   ntent.
-PSAvoidUsingCmdletAliases           Warning      cshell-dev 98    'echo' is an
+PSAvoidUsingCmdletAliases           Warning      cshell-dev 91    'echo' is an
+                                                 s.ps1            alias of 'Wri
+                                                                  te-Output'. A
+                                                                  lias can intr
+                                                                  oduce possibl
+                                                                  e problems an
+                                                                  d make script
+                                                                  s hard to mai
+                                                                  ntain. Please
+                                                                   consider cha
+                                                                  nging alias t
+                                                                  o its full co
+                                                                  ntent.
+PSAvoidUsingCmdletAliases           Warning      cshell-dev 96    'echo' is an
                                                  s.ps1            alias of 'Wri
                                                                   te-Output'. A
                                                                   lias can intr
@@ -759,18 +861,40 @@ PSAvoidUsingCmdletAliases           Warning      cshell-dev 98    'echo' is an
 
 [32;1mRuleName                            Severity     ScriptName Line  Message[0m
 [32;1m--------                            --------     ---------- ----  -------[0m
-PSAvoidGlobalVars                   Warning      cshell-ser 7     Found global
+PSAvoidGlobalVars                   Warning      cshell-ser 8     Found global
                                                  vers.ps1         variable 'glo
                                                                   bal:Id'.
-PSAvoidGlobalVars                   Warning      cshell-ser 7     Found global
-                                                 vers.ps1         variable 'glo
-                                                                  bal:Id'.
-PSAvoidGlobalVars                   Warning      cshell-ser 10    Found global
+PSAvoidGlobalVars                   Warning      cshell-ser 8     Found global
                                                  vers.ps1         variable 'glo
                                                                   bal:Id'.
 PSAvoidGlobalVars                   Warning      cshell-ser 11    Found global
                                                  vers.ps1         variable 'glo
                                                                   bal:Id'.
+PSAvoidGlobalVars                   Warning      cshell-ser 12    Found global
+                                                 vers.ps1         variable 'glo
+                                                                  bal:Id'.
+PSAvoidUsingWriteHost               Warning      cshell-ser 4     File 'cshell-
+                                                 vers.ps1         servers.ps1'
+                                                                  uses Write-Ho
+                                                                  st. Avoid usi
+                                                                  ng Write-Host
+                                                                   because it m
+                                                                  ight not work
+                                                                   in all hosts
+                                                                  , does not wo
+                                                                  rk when there
+                                                                   is no host,
+                                                                  and (prior to
+                                                                   PS 5.0) cann
+                                                                  ot be suppres
+                                                                  sed, captured
+                                                                  , or redirect
+                                                                  ed. Instead,
+                                                                  use Write-Out
+                                                                  put, Write-Ve
+                                                                  rbose, or Wri
+                                                                  te-Informatio
+                                                                  n.
 PSAvoidUsingCmdletAliases           Warning      cshell-ser 1     'echo' is an
                                                  vers.ps1         alias of 'Wri
                                                                   te-Output'. A
@@ -797,19 +921,6 @@ PSAvoidUsingCmdletAliases           Warning      cshell-ser 2     'echo' is an
                                                                   nging alias t
                                                                   o its full co
                                                                   ntent.
-PSAvoidUsingCmdletAliases           Warning      cshell-ser 10    'echo' is an
-                                                 vers.ps1         alias of 'Wri
-                                                                  te-Output'. A
-                                                                  lias can intr
-                                                                  oduce possibl
-                                                                  e problems an
-                                                                  d make script
-                                                                  s hard to mai
-                                                                  ntain. Please
-                                                                   consider cha
-                                                                  nging alias t
-                                                                  o its full co
-                                                                  ntent.
 PSAvoidUsingCmdletAliases           Warning      cshell-ser 11    'echo' is an
                                                  vers.ps1         alias of 'Wri
                                                                   te-Output'. A
@@ -823,85 +934,37 @@ PSAvoidUsingCmdletAliases           Warning      cshell-ser 11    'echo' is an
                                                                   nging alias t
                                                                   o its full co
                                                                   ntent.
-PSAvoidUsingWriteHost               Warning      cshell-ser 4     File 'cshell-
-                                                 vers.ps1         servers.ps1'
-                                                                  uses Write-Ho
-                                                                  st. Avoid usi
-                                                                  ng Write-Host
-                                                                   because it m
-                                                                  ight not work
-                                                                   in all hosts
-                                                                  , does not wo
-                                                                  rk when there
-                                                                   is no host,
-                                                                  and (prior to
-                                                                   PS 5.0) cann
-                                                                  ot be suppres
-                                                                  sed, captured
-                                                                  , or redirect
-                                                                  ed. Instead,
-                                                                  use Write-Out
-                                                                  put, Write-Ve
-                                                                  rbose, or Wri
-                                                                  te-Informatio
-                                                                  n.
+PSAvoidUsingCmdletAliases           Warning      cshell-ser 12    'echo' is an
+                                                 vers.ps1         alias of 'Wri
+                                                                  te-Output'. A
+                                                                  lias can intr
+                                                                  oduce possibl
+                                                                  e problems an
+                                                                  d make script
+                                                                  s hard to mai
+                                                                  ntain. Please
+                                                                   consider cha
+                                                                  nging alias t
+                                                                  o its full co
+                                                                  ntent.
 
 [0m
-[31m❌ Linted [POWERSHELL] files with [powershell]: Found 2 error(s) - (2.63s)[0m
-[Text Reporter] Generated TEXT report: /github/workspace/report/linters_logs/WARNING-YAML_PRETTIER.log
-
-[1m### Processed [YAML] files[0m
-- Using [yamllint v1.26.3] https://megalinter.github.io/v5/descriptors/yaml_yamllint
-- MegaLinter key: [YAML_YAMLLINT]
-- Rules config: [.yamllint.yml]
-[yamllint] .github/workflows/pre.yml
-[yamllint] .github/workflows/server.yml
-[yamllint] .github/workflows/wiki.yml
---Error detail:
-::warning file=/github/workspace/.github/workflows/pre.yml,line=1,col=1::[document-start] missing document start "---"
-::warning file=/github/workspace/.github/workflows/pre.yml,line=3,col=1::[truthy] truthy value should be one of [false, true]
-::error file=/github/workspace/.github/workflows/pre.yml,line=27,col=1::[trailing-spaces] trailing spaces
-::error file=/github/workspace/.github/workflows/pre.yml,line=28,col=1::[trailing-spaces] trailing spaces
-::error file=/github/workspace/.github/workflows/pre.yml,line=31,col=1::[trailing-spaces] trailing spaces
-::warning file=/github/workspace/.github/workflows/pre.yml,line=60,col=104::[comments] too few spaces before comment
-::warning file=/github/workspace/.github/workflows/pre.yml,line=66,col=36::[comments] too few spaces before comment
-::error file=/github/workspace/.github/workflows/pre.yml,line=136,col=1::[trailing-spaces] trailing spaces
-::error file=/github/workspace/.github/workflows/pre.yml,line=137,col=1::[trailing-spaces] trailing spaces
-::warning file=/github/workspace/.github/workflows/server.yml,line=1,col=1::[document-start] missing document start "---"
-::warning file=/github/workspace/.github/workflows/server.yml,line=1,col=1::[truthy] truthy value should be one of [false, true]
-::warning file=/github/workspace/.github/workflows/wiki.yml,line=1,col=1::[document-start] missing document start "---"
-::warning file=/github/workspace/.github/workflows/wiki.yml,line=1,col=1::[truthy] truthy value should be one of [false, true]
-::error file=/github/workspace/.github/workflows/wiki.yml,line=9,col=1::[trailing-spaces] trailing spaces
-::error file=/github/workspace/.github/workflows/wiki.yml,line=10,col=1::[trailing-spaces] trailing spaces
-::error file=/github/workspace/.github/workflows/wiki.yml,line=22,col=11::[indentation] wrong indentation: expected 12 but found 10
-
-[31m❌ Linted [YAML] files with [yamllint]: Found 1 error(s) - (0.15s)[0m
+[31m❌ Linted [POWERSHELL] files with [powershell]: Found 2 error(s) - (10.62s)[0m
 [Text Reporter] Generated TEXT report: /github/workspace/report/linters_logs/ERROR-POWERSHELL_POWERSHELL.log
-[Text Reporter] Generated TEXT report: /github/workspace/report/linters_logs/ERROR-YAML_YAMLLINT.log
-
-[1m### Processed [YAML] files[0m
-- Using [v8r v0.6.1] https://megalinter.github.io/v5/descriptors/yaml_v8r
-- MegaLinter key: [YAML_V8R]
-- Rules config: identified by [v8r]
-[v8r] .github/workflows/pre.yml - SUCCESS - 0 error(s)
-[v8r] .github/workflows/server.yml - SUCCESS - 0 error(s)
-[v8r] .github/workflows/wiki.yml - SUCCESS - 0 error(s)
-[32m✅ Linted [YAML] files with [v8r] successfully - (2.28s)[0m
-[Text Reporter] Generated TEXT report: /github/workspace/report/linters_logs/SUCCESS-YAML_V8R.log
 
 +----SUMMARY-----+--------------------------+---------------+-------+-------+--------+--------------+
 | Descriptor     | Linter                   | Mode          | Files | Fixed | Errors | Elapsed time |
 +----------------+--------------------------+---------------+-------+-------+--------+--------------+
 | ✅ ACTION      | actionlint               | list_of_files |     3 |       |      0 |        0.02s |
-| ✅ CREDENTIALS | secretlint               | project       |   n/a |       |      0 |        1.03s |
+| ✅ CREDENTIALS | secretlint               | project       |   n/a |       |      0 |        1.08s |
 | ✅ GIT         | git_diff                 | project       |   n/a |       |      0 |        0.01s |
-| ◬ MARKDOWN     | markdownlint             | list_of_files |     5 |       |      5 |        0.36s |
-| ❌ MARKDOWN    | markdown-link-check      | file          |     5 |       |      2 |        1.76s |
-| ✅ MARKDOWN    | markdown-table-formatter | list_of_files |     5 |       |      0 |        0.28s |
-| ❌ POWERSHELL  | powershell               | file          |     2 |       |      2 |        2.63s |
-| ◬ YAML         | prettier                 | list_of_files |     3 |       |      1 |        1.11s |
-| ✅ YAML        | v8r                      | file          |     3 |       |      0 |        2.28s |
-| ❌ YAML        | yamllint                 | list_of_files |     3 |       |      1 |        0.15s |
+| ◬ MARKDOWN     | markdownlint             | list_of_files |     5 |       |      7 |        0.39s |
+| ❌ MARKDOWN    | markdown-link-check      | file          |     5 |       |      2 |        2.23s |
+| ✅ MARKDOWN    | markdown-table-formatter | list_of_files |     5 |       |      0 |        0.29s |
+| ❌ POWERSHELL  | powershell               | file          |     2 |       |      2 |       10.62s |
+| ◬ YAML         | prettier                 | list_of_files |     3 |       |      1 |        1.16s |
+| ✅ YAML        | v8r                      | file          |     3 |       |      0 |        2.45s |
+| ❌ YAML        | yamllint                 | list_of_files |     3 |       |      1 |        0.16s |
 +----------------+--------------------------+---------------+-------+-------+--------+--------------+
 
 [34mYou could have same capabilities but better runtime performances if you use a MegaLinter flavor:[0m

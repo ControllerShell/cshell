@@ -21,40 +21,49 @@ See documentation on https://megalinter.github.io/descriptors/powershell_powersh
     PSAvoidGlobalVars                   Warning      cshell-dev 65    Found global
                                                      s.ps1            variable 'glo
                                                                       bal:games'.
-    PSAvoidGlobalVars                   Warning      cshell-dev 71    Found global
+    PSAvoidGlobalVars                   Warning      cshell-dev 72    Found global
                                                      s.ps1            variable 'glo
                                                                       bal:games'.
     PSAvoidGlobalVars                   Warning      cshell-dev 73    Found global
                                                      s.ps1            variable 'glo
-                                                                      bal:name'.
-    PSAvoidGlobalVars                   Warning      cshell-dev 75    Found global
+                                                                      bal:games'.
+    PSAvoidGlobalVars                   Warning      cshell-dev 74    Found global
                                                      s.ps1            variable 'glo
                                                                       bal:games'.
-    PSAvoidGlobalVars                   Warning      cshell-dev 75    Found global
+    PSAvoidGlobalVars                   Warning      cshell-dev 76    Found global
                                                      s.ps1            variable 'glo
                                                                       bal:name'.
-    PSAvoidGlobalVars                   Warning      cshell-dev 77    Found global
-                                                     s.ps1            variable 'glo
-                                                                      bal:name'.
-    PSAvoidGlobalVars                   Warning      cshell-dev 77    Found global
-                                                     s.ps1            variable 'glo
-                                                                      bal:name'.
-    PSAvoidGlobalVars                   Warning      cshell-dev 77    Found global
-                                                     s.ps1            variable 'glo
-                                                                      bal:name'.
-    PSAvoidGlobalVars                   Warning      cshell-dev 87    Found global
-                                                     s.ps1            variable 'glo
-                                                                      bal:name'.
-    PSAvoidGlobalVars                   Warning      cshell-dev 87    Found global
+    PSAvoidGlobalVars                   Warning      cshell-dev 78    Found global
                                                      s.ps1            variable 'glo
                                                                       bal:games'.
-    PSAvoidGlobalVars                   Warning      cshell-dev 93    Found global
+    PSAvoidGlobalVars                   Warning      cshell-dev 78    Found global
                                                      s.ps1            variable 'glo
                                                                       bal:name'.
-    PSAvoidGlobalVars                   Warning      cshell-dev 96    Found global
+    PSAvoidGlobalVars                   Warning      cshell-dev 80    Found global
                                                      s.ps1            variable 'glo
                                                                       bal:name'.
-    PSAvoidGlobalVars                   Warning      cshell-dev 99    Found global
+    PSAvoidGlobalVars                   Warning      cshell-dev 80    Found global
+                                                     s.ps1            variable 'glo
+                                                                      bal:name'.
+    PSAvoidGlobalVars                   Warning      cshell-dev 80    Found global
+                                                     s.ps1            variable 'glo
+                                                                      bal:name'.
+    PSAvoidGlobalVars                   Warning      cshell-dev 90    Found global
+                                                     s.ps1            variable 'glo
+                                                                      bal:name'.
+    PSAvoidGlobalVars                   Warning      cshell-dev 90    Found global
+                                                     s.ps1            variable 'glo
+                                                                      bal:games'.
+    PSAvoidGlobalVars                   Warning      cshell-dev 91    Found global
+                                                     s.ps1            variable 'glo
+                                                                      bal:games'.
+    PSAvoidGlobalVars                   Warning      cshell-dev 91    Found global
+                                                     s.ps1            variable 'glo
+                                                                      bal:name'.
+    PSAvoidGlobalVars                   Warning      cshell-dev 92    Found global
+                                                     s.ps1            variable 'glo
+                                                                      bal:name'.
+    PSAvoidGlobalVars                   Warning      cshell-dev 97    Found global
                                                      s.ps1            variable 'glo
                                                                       bal:name'.
     PSAvoidTrailingWhitespace           Information  cshell-dev 2     Line has trai
@@ -63,7 +72,7 @@ See documentation on https://megalinter.github.io/descriptors/powershell_powersh
     PSAvoidTrailingWhitespace           Information  cshell-dev 57    Line has trai
                                                      s.ps1            ling whitespa
                                                                       ce
-    PSAvoidTrailingWhitespace           Information  cshell-dev 97    Line has trai
+    PSAvoidTrailingWhitespace           Information  cshell-dev 95    Line has trai
                                                      s.ps1            ling whitespa
                                                                       ce
     PSAvoidUsingWriteHost               Warning      cshell-dev 18    File 'cshell-
@@ -213,7 +222,7 @@ See documentation on https://megalinter.github.io/descriptors/powershell_powersh
                                                                       , Write-Verbo
                                                                       se, or Write-
                                                                       Information.
-    PSAvoidUsingWriteHost               Warning      cshell-dev 78    File 'cshell-
+    PSAvoidUsingWriteHost               Warning      cshell-dev 81    File 'cshell-
                                                      s.ps1            devs.ps1' use
                                                                       s Write-Host.
                                                                        Avoid using
@@ -239,33 +248,33 @@ See documentation on https://megalinter.github.io/descriptors/powershell_powersh
                                                                       on-ASCII enco
                                                                       ded file 'csh
                                                                       ell-devs.ps1'
+    PSAvoidUsingCmdletAliases           Warning      cshell-dev 101   'echo' is an
+                                                     s.ps1            alias of 'Wri
+                                                                      te-Output'. A
+                                                                      lias can intr
+                                                                      oduce possibl
+                                                                      e problems an
+                                                                      d make script
+                                                                      s hard to mai
+                                                                      ntain. Please
+                                                                       consider cha
+                                                                      nging alias t
+                                                                      o its full co
+                                                                      ntent.
+    PSAvoidUsingCmdletAliases           Warning      cshell-dev 102   'echo' is an
+                                                     s.ps1            alias of 'Wri
+                                                                      te-Output'. A
+                                                                      lias can intr
+                                                                      oduce possibl
+                                                                      e problems an
+                                                                      d make script
+                                                                      s hard to mai
+                                                                      ntain. Please
+                                                                       consider cha
+                                                                      nging alias t
+                                                                      o its full co
+                                                                      ntent.
     PSAvoidUsingCmdletAliases           Warning      cshell-dev 103   'echo' is an
-                                                     s.ps1            alias of 'Wri
-                                                                      te-Output'. A
-                                                                      lias can intr
-                                                                      oduce possibl
-                                                                      e problems an
-                                                                      d make script
-                                                                      s hard to mai
-                                                                      ntain. Please
-                                                                       consider cha
-                                                                      nging alias t
-                                                                      o its full co
-                                                                      ntent.
-    PSAvoidUsingCmdletAliases           Warning      cshell-dev 104   'echo' is an
-                                                     s.ps1            alias of 'Wri
-                                                                      te-Output'. A
-                                                                      lias can intr
-                                                                      oduce possibl
-                                                                      e problems an
-                                                                      d make script
-                                                                      s hard to mai
-                                                                      ntain. Please
-                                                                       consider cha
-                                                                      nging alias t
-                                                                      o its full co
-                                                                      ntent.
-    PSAvoidUsingCmdletAliases           Warning      cshell-dev 105   'echo' is an
                                                      s.ps1            alias of 'Wri
                                                                       te-Output'. A
                                                                       lias can intr
@@ -538,7 +547,20 @@ See documentation on https://megalinter.github.io/descriptors/powershell_powersh
                                                                       nging alias t
                                                                       o its full co
                                                                       ntent.
-    PSAvoidUsingCmdletAliases           Warning      cshell-dev 71    '%' is an ali
+    PSAvoidUsingCmdletAliases           Warning      cshell-dev 71    'echo' is an
+                                                     s.ps1            alias of 'Wri
+                                                                      te-Output'. A
+                                                                      lias can intr
+                                                                      oduce possibl
+                                                                      e problems an
+                                                                      d make script
+                                                                      s hard to mai
+                                                                      ntain. Please
+                                                                       consider cha
+                                                                      nging alias t
+                                                                      o its full co
+                                                                      ntent.
+    PSAvoidUsingCmdletAliases           Warning      cshell-dev 72    '%' is an ali
                                                      s.ps1            as of 'ForEac
                                                                       h-Object'. Al
                                                                       ias can intro
@@ -551,7 +573,33 @@ See documentation on https://megalinter.github.io/descriptors/powershell_powersh
                                                                       ging alias to
                                                                        its full con
                                                                       tent.
-    PSAvoidUsingCmdletAliases           Warning      cshell-dev 80    'cls' is an a
+    PSAvoidUsingCmdletAliases           Warning      cshell-dev 73    '%' is an ali
+                                                     s.ps1            as of 'ForEac
+                                                                      h-Object'. Al
+                                                                      ias can intro
+                                                                      duce possible
+                                                                       problems and
+                                                                       make scripts
+                                                                       hard to main
+                                                                      tain. Please
+                                                                      consider chan
+                                                                      ging alias to
+                                                                       its full con
+                                                                      tent.
+    PSAvoidUsingCmdletAliases           Warning      cshell-dev 74    '%' is an ali
+                                                     s.ps1            as of 'ForEac
+                                                                      h-Object'. Al
+                                                                      ias can intro
+                                                                      duce possible
+                                                                       problems and
+                                                                       make scripts
+                                                                       hard to main
+                                                                      tain. Please
+                                                                      consider chan
+                                                                      ging alias to
+                                                                       its full con
+                                                                      tent.
+    PSAvoidUsingCmdletAliases           Warning      cshell-dev 83    'cls' is an a
                                                      s.ps1            lias of 'Clea
                                                                       r-Host'. Alia
                                                                       s can introdu
@@ -564,7 +612,7 @@ See documentation on https://megalinter.github.io/descriptors/powershell_powersh
                                                                       ng alias to i
                                                                       ts full conte
                                                                       nt.
-    PSAvoidUsingCmdletAliases           Warning      cshell-dev 85    'echo' is an
+    PSAvoidUsingCmdletAliases           Warning      cshell-dev 88    'echo' is an
                                                      s.ps1            alias of 'Wri
                                                                       te-Output'. A
                                                                       lias can intr
@@ -577,7 +625,7 @@ See documentation on https://megalinter.github.io/descriptors/powershell_powersh
                                                                       nging alias t
                                                                       o its full co
                                                                       ntent.
-    PSAvoidUsingCmdletAliases           Warning      cshell-dev 87    'echo' is an
+    PSAvoidUsingCmdletAliases           Warning      cshell-dev 90    'echo' is an
                                                      s.ps1            alias of 'Wri
                                                                       te-Output'. A
                                                                       lias can intr
@@ -590,7 +638,20 @@ See documentation on https://megalinter.github.io/descriptors/powershell_powersh
                                                                       nging alias t
                                                                       o its full co
                                                                       ntent.
-    PSAvoidUsingCmdletAliases           Warning      cshell-dev 98    'echo' is an
+    PSAvoidUsingCmdletAliases           Warning      cshell-dev 91    'echo' is an
+                                                     s.ps1            alias of 'Wri
+                                                                      te-Output'. A
+                                                                      lias can intr
+                                                                      oduce possibl
+                                                                      e problems an
+                                                                      d make script
+                                                                      s hard to mai
+                                                                      ntain. Please
+                                                                       consider cha
+                                                                      nging alias t
+                                                                      o its full co
+                                                                      ntent.
+    PSAvoidUsingCmdletAliases           Warning      cshell-dev 96    'echo' is an
                                                      s.ps1            alias of 'Wri
                                                                       te-Output'. A
                                                                       lias can intr
@@ -608,18 +669,40 @@ See documentation on https://megalinter.github.io/descriptors/powershell_powersh
     
     RuleName                            Severity     ScriptName Line  Message
     --------                            --------     ---------- ----  -------
-    PSAvoidGlobalVars                   Warning      cshell-ser 7     Found global
+    PSAvoidGlobalVars                   Warning      cshell-ser 8     Found global
                                                      vers.ps1         variable 'glo
                                                                       bal:Id'.
-    PSAvoidGlobalVars                   Warning      cshell-ser 7     Found global
-                                                     vers.ps1         variable 'glo
-                                                                      bal:Id'.
-    PSAvoidGlobalVars                   Warning      cshell-ser 10    Found global
+    PSAvoidGlobalVars                   Warning      cshell-ser 8     Found global
                                                      vers.ps1         variable 'glo
                                                                       bal:Id'.
     PSAvoidGlobalVars                   Warning      cshell-ser 11    Found global
                                                      vers.ps1         variable 'glo
                                                                       bal:Id'.
+    PSAvoidGlobalVars                   Warning      cshell-ser 12    Found global
+                                                     vers.ps1         variable 'glo
+                                                                      bal:Id'.
+    PSAvoidUsingWriteHost               Warning      cshell-ser 4     File 'cshell-
+                                                     vers.ps1         servers.ps1'
+                                                                      uses Write-Ho
+                                                                      st. Avoid usi
+                                                                      ng Write-Host
+                                                                       because it m
+                                                                      ight not work
+                                                                       in all hosts
+                                                                      , does not wo
+                                                                      rk when there
+                                                                       is no host,
+                                                                      and (prior to
+                                                                       PS 5.0) cann
+                                                                      ot be suppres
+                                                                      sed, captured
+                                                                      , or redirect
+                                                                      ed. Instead,
+                                                                      use Write-Out
+                                                                      put, Write-Ve
+                                                                      rbose, or Wri
+                                                                      te-Informatio
+                                                                      n.
     PSAvoidUsingCmdletAliases           Warning      cshell-ser 1     'echo' is an
                                                      vers.ps1         alias of 'Wri
                                                                       te-Output'. A
@@ -646,19 +729,6 @@ See documentation on https://megalinter.github.io/descriptors/powershell_powersh
                                                                       nging alias t
                                                                       o its full co
                                                                       ntent.
-    PSAvoidUsingCmdletAliases           Warning      cshell-ser 10    'echo' is an
-                                                     vers.ps1         alias of 'Wri
-                                                                      te-Output'. A
-                                                                      lias can intr
-                                                                      oduce possibl
-                                                                      e problems an
-                                                                      d make script
-                                                                      s hard to mai
-                                                                      ntain. Please
-                                                                       consider cha
-                                                                      nging alias t
-                                                                      o its full co
-                                                                      ntent.
     PSAvoidUsingCmdletAliases           Warning      cshell-ser 11    'echo' is an
                                                      vers.ps1         alias of 'Wri
                                                                       te-Output'. A
@@ -672,26 +742,17 @@ See documentation on https://megalinter.github.io/descriptors/powershell_powersh
                                                                       nging alias t
                                                                       o its full co
                                                                       ntent.
-    PSAvoidUsingWriteHost               Warning      cshell-ser 4     File 'cshell-
-                                                     vers.ps1         servers.ps1'
-                                                                      uses Write-Ho
-                                                                      st. Avoid usi
-                                                                      ng Write-Host
-                                                                       because it m
-                                                                      ight not work
-                                                                       in all hosts
-                                                                      , does not wo
-                                                                      rk when there
-                                                                       is no host,
-                                                                      and (prior to
-                                                                       PS 5.0) cann
-                                                                      ot be suppres
-                                                                      sed, captured
-                                                                      , or redirect
-                                                                      ed. Instead,
-                                                                      use Write-Out
-                                                                      put, Write-Ve
-                                                                      rbose, or Wri
-                                                                      te-Informatio
-                                                                      n.
+    PSAvoidUsingCmdletAliases           Warning      cshell-ser 12    'echo' is an
+                                                     vers.ps1         alias of 'Wri
+                                                                      te-Output'. A
+                                                                      lias can intr
+                                                                      oduce possibl
+                                                                      e problems an
+                                                                      d make script
+                                                                      s hard to mai
+                                                                      ntain. Please
+                                                                       consider cha
+                                                                      nging alias t
+                                                                      o its full co
+                                                                      ntent.
 
